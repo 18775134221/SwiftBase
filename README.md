@@ -10,10 +10,10 @@
 161210 完成主框架的搭建
 
 161212 完成网络请求工具的封装
+
+
 import UIKit
 import Alamofire
-
-
 class NetworkTools: NSObject {
     
     fileprivate let baseServiceUrl: String = "www.baidu.com"
