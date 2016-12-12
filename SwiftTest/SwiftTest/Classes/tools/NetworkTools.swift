@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 
 class NetworkTools: NSObject {
@@ -18,12 +19,33 @@ class NetworkTools: NSObject {
     }
     
     // 请求网络数据
-    class func requestData(type: requestType, params: [String:String]? = nil, finishCallback: (_ result: Any) ->()) {
+    class func requestData(type: requestType, params: [String:Any]? = nil, finishCallback: @escaping (_ result: Any) ->()) {
         
         // 1.获取类型
-//        var methodType = type == .get ? HTTPMethod.get : HTTPMethod.post
+        let methodType = type == .get ? HTTPMethod.get : HTTPMethod.post
         
         // 2.发送网络请求
+        Alamofire.request("www.baidu.com", method: methodType, parameters: params, encoding: JSONEncoding.default)
+            .downloadProgress(queue: DispatchQueue.global(qos: .utility)) { progress in
+                print("Progress: \(progress.fractionCompleted)")
+            }
+            .validate { request, response, data in
+                return .success
+            }
+            .responseJSON { response in
+                debugPrint(response)
+                // 3.获取结果
+                guard let result = response.result.value else {
+                    print(response.result.error as Any)
+                    return
+                }
+                
+                // 4.将结果回调出去
+                finishCallback(result)
+        }
+        
+        
+        
     }
 
 }
