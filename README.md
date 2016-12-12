@@ -14,6 +14,7 @@
 
 import UIKit
 import Alamofire
+
 class NetworkTools: NSObject {
     
     fileprivate let baseServiceUrl: String = "www.baidu.com"
