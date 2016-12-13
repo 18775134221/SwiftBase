@@ -9,10 +9,13 @@
 import UIKit
 import Alamofire
 
+// 基本的服务器地址
+let baseServiceUrl: String = "www.baidu.com"
+// 测试的服务器地址
+let baseTestServiceUrl: String = "www.baidu.com"
 
 class NetworkTools: NSObject {
     
-    fileprivate let baseServiceUrl: String = "www.baidu.com"
     // 请求类型
     enum requestType {
         case get, post
@@ -25,7 +28,7 @@ class NetworkTools: NSObject {
         let methodType = type == .get ? HTTPMethod.get : HTTPMethod.post
         
         // 2.发送网络请求
-        Alamofire.request("www.baidu.com", method: methodType, parameters: params, encoding: JSONEncoding.default)
+        Alamofire.request(baseServiceUrl, method: methodType, parameters: params, encoding: JSONEncoding.default)
             .downloadProgress(queue: DispatchQueue.global(qos: .utility)) { progress in
                 print("Progress: \(progress.fractionCompleted)")
             }

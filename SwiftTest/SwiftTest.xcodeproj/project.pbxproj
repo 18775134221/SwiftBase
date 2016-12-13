@@ -18,6 +18,7 @@
 		048CD3A11DFBCDF2005EE060 /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048CD39E1DFBCDF2005EE060 /* UIBarButtonItem-Extension.swift */; };
 		048CD3A21DFBCDF2005EE060 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048CD39F1DFBCDF2005EE060 /* UIColor-Extension.swift */; };
 		048CD3A41DFBD1B0005EE060 /* BaseTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048CD3A31DFBD1B0005EE060 /* BaseTabBar.swift */; };
+		04C129A31DFFD943007832FB /* WKDelegateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C129A21DFFD943007832FB /* WKDelegateVC.swift */; };
 		04CDBFD91DFB863000E427E1 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CDBFD81DFB863000E427E1 /* Home.storyboard */; };
 		04CDBFDB1DFB864400E427E1 /* Types.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CDBFDA1DFB864400E427E1 /* Types.storyboard */; };
 		04CDBFDD1DFB866000E427E1 /* ShoppingCart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CDBFDC1DFB866000E427E1 /* ShoppingCart.storyboard */; };
@@ -68,6 +69,7 @@
 		048CD39E1DFBCDF2005EE060 /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
 		048CD39F1DFBCDF2005EE060 /* UIColor-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
 		048CD3A31DFBD1B0005EE060 /* BaseTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBar.swift; sourceTree = "<group>"; };
+		04C129A21DFFD943007832FB /* WKDelegateVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKDelegateVC.swift; sourceTree = "<group>"; };
 		04CDBFD01DFB83E900E427E1 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		04CDBFD81DFB863000E427E1 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		04CDBFDA1DFB864400E427E1 /* Types.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Types.storyboard; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 				04CDBFF21DFB890000E427E1 /* BaseTabBarVC.swift */,
 				04CDBFF41DFB892000E427E1 /* BaseVC.swift */,
 				04CDBFF61DFB895400E427E1 /* BaseTableVC.swift */,
+				04C129A21DFFD943007832FB /* WKDelegateVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -590,6 +593,7 @@
 				048CD3A01DFBCDF2005EE060 /* NSDate-Extension.swift in Sources */,
 				04CDBFF71DFB895400E427E1 /* BaseTableVC.swift in Sources */,
 				04CDBFF51DFB892000E427E1 /* BaseVC.swift in Sources */,
+				04C129A31DFFD943007832FB /* WKDelegateVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
