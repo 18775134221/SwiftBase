@@ -7,7 +7,7 @@
 
 使用方法：仔细阅读代码就是可以使用
 
-161210 完成主框架的搭建
+# 161210 完成主框架的搭建
     1.UITabBar的自定义
     
     import UIKit
@@ -78,7 +78,7 @@ class BaseTabBar: UITabBar {
     
 }
 
-161212 完成网络请求工具的封装
+# 161212 完成网络请求工具的封装
 
 
 import UIKit
