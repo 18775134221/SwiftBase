@@ -12,7 +12,7 @@ import UIKit
 class JQPhoneManagerVC: UIViewController {
 
     
-    var webView: UIWebView?
+    var  webView: UIWebView?
     
     init () {
         webView = UIWebView()
@@ -44,8 +44,8 @@ class JQPhoneManagerVC: UIViewController {
         // 拨打电话
         let noString: String = "tel://" + no
         let url: NSURL = NSURL(string: noString)!;
-        let canOpen: Bool = UIApplication.shared.openURL(url as URL)
-        if canOpen == false {
+        let canOpen: Bool? = UIApplication.shared.openURL(url as URL)
+        if canOpen == false { // 可选类型才可以使用可选绑定 对象才可以置空
             failBlock()
             return
         }
