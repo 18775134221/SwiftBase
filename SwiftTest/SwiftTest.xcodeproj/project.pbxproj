@@ -11,6 +11,7 @@
 		0442737F1DED2AF600429A5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0442737E1DED2AF600429A5A /* Assets.xcassets */; };
 		0442738D1DED2AF600429A5A /* SwiftTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0442738C1DED2AF600429A5A /* SwiftTestTests.swift */; };
 		044273981DED2AF600429A5A /* SwiftTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044273971DED2AF600429A5A /* SwiftTestUITests.swift */; };
+		04878BBB1E0142AA0019B271 /* JQPhoneManagerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04878BBA1E0142AA0019B271 /* JQPhoneManagerVC.swift */; };
 		048CD3701DFBA83C005EE060 /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048CD36F1DFBA83C005EE060 /* NetworkTools.swift */; };
 		048CD39B1DFBCD93005EE060 /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048CD3991DFBCD93005EE060 /* PageContentView.swift */; };
 		048CD39C1DFBCD93005EE060 /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048CD39A1DFBCD93005EE060 /* PageTitleView.swift */; };
@@ -62,6 +63,7 @@
 		044273931DED2AF600429A5A /* SwiftTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		044273971DED2AF600429A5A /* SwiftTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTestUITests.swift; sourceTree = "<group>"; };
 		044273991DED2AF600429A5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04878BBA1E0142AA0019B271 /* JQPhoneManagerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JQPhoneManagerVC.swift; sourceTree = "<group>"; };
 		048CD36F1DFBA83C005EE060 /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
 		048CD3991DFBCD93005EE060 /* PageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
 		048CD39A1DFBCD93005EE060 /* PageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 			children = (
 				04CDBFEF1DFB87FE00E427E1 /* Extention */,
 				048CD36F1DFBA83C005EE060 /* NetworkTools.swift */,
+				04878BBA1E0142AA0019B271 /* JQPhoneManagerVC.swift */,
 			);
 			path = tools;
 			sourceTree = "<group>";
@@ -587,6 +590,7 @@
 				04CDBFF31DFB890000E427E1 /* BaseTabBarVC.swift in Sources */,
 				04CDBFFF1DFB8B2500E427E1 /* MineVC.swift in Sources */,
 				04CDBFF91DFB8AAC00E427E1 /* HomeVC.swift in Sources */,
+				04878BBB1E0142AA0019B271 /* JQPhoneManagerVC.swift in Sources */,
 				048CD3A21DFBCDF2005EE060 /* UIColor-Extension.swift in Sources */,
 				048CD39B1DFBCD93005EE060 /* PageContentView.swift in Sources */,
 				04CDBFFB1DFB8AD500E427E1 /* TypesVC.swift in Sources */,
