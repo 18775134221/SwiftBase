@@ -22,14 +22,11 @@ class ShoppingCartVC: BaseVC {
     }
     
 
-    /*
-    // MARK: - Navigation
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        ToastView.instance.showToast(content: "我是提示框")
+        //ToastView.instance.showLoadingView()
+        //ToastView.instance.clear()
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
-    */
 
 }
