@@ -45,13 +45,13 @@ class BaseTabBar: UITabBar {
     }
     
     
-    fileprivate lazy var pBtn: UIButton = {[weak self] in
+    fileprivate lazy var pBtn: UIButton = {[unowned self] in
         
         let btn: UIButton = UIButton(type:.custom)
         btn.bounds = CGRect(x: 0, y: 0, width: 50, height: 50)
         btn.backgroundColor = UIColor.red
         btn.sizeToFit()
-        self?.addSubview(btn)
+        self.addSubview(btn)
         return btn
     }()
     
