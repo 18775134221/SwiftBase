@@ -39,10 +39,14 @@ class JQPhoneManagerVC: UIViewController {
      *  @param no                   电话号码
      *  @param inViewController     需要打电话的控制器
      */
-    class func call(_ no: String, _ inViewController: UIViewController?,failBlock: ()->()) {
+    class func call(_ no: String?, _ inViewController: UIViewController?,failBlock: ()->()) {
     
+        guard no != nil else {
+            failBlock()
+            return
+        }
         // 拨打电话
-        let noString: String = "tel://" + no
+        let noString: String = "tel://" + no!
         let url: NSURL = NSURL(string: noString)!;
         let canOpen: Bool? = UIApplication.shared.openURL(url as URL)
         if canOpen == false { // 可选类型才可以使用可选绑定 对象才可以置空

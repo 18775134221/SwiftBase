@@ -23,7 +23,7 @@ class TypesVC: BaseVC {
     
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        JQPhoneManagerVC.call("10086", self, failBlock: {
+        JQPhoneManagerVC.call(nil, self, failBlock: {
             print("拨打失败")
         })
     }
