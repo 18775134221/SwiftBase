@@ -36,15 +36,16 @@ extension BaseNavigationVC {
         
         // 3.获取target/action
         // 3.1.利用运行时机制查看所有的属性名称
-        /*
+
          var count : UInt32 = 0
-         let ivars = class_copyIvarList(UIGestureRecognizer.self, &count)!
+         let ivars = class_copyIvarList(UIAlertAction.self, &count)!
          for i in 0..<count {
          let ivar = ivars[Int(i)]
          let name = ivar_getName(ivar)
          print(String(cString: name!))
          }
-         */
+        
+ 
         let targets = systemGes.value(forKey: "_targets") as? [NSObject]
         guard let targetObjc = targets?.first else { return }
         

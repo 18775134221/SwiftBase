@@ -8,6 +8,18 @@
 
 import UIKit
 
+// MARK: - 自定义Log打印
+func debugLog<T>(_ messsage : T, file : String = #file, funcName : String = #function, lineNum : Int = #line) {
+    
+    #if DEBUG
+        
+        let fileName = (file as NSString).lastPathComponent
+        
+        print("\(fileName):(\(lineNum))-\(messsage)")
+        
+    #endif
+}
+
 class BaseTabBarVC: UITabBarController {
 
     fileprivate var homeVC: HomeVC? = nil

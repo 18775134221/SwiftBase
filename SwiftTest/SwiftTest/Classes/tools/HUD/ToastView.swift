@@ -40,6 +40,8 @@ class ToastView : NSObject{
         window.isHidden = false
         window.addSubview(loadingContainerView)
         
+        loadingContainerView.layer.add(AnimationUtil.getLoadToastAnimation(duration: 3.0), forKey: "animation")
+        
         windows.append(window)
         
     }

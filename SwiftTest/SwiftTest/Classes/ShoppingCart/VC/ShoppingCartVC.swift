@@ -12,8 +12,8 @@ class ShoppingCartVC: BaseVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,9 +23,13 @@ class ShoppingCartVC: BaseVC {
     
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        ToastView.instance.showToast(content: "我是提示框")
-        //ToastView.instance.showLoadingView()
+//        ToastView.instance.showToast(content: "我是提示框")
+//        ToastView.instance.showLoadingView()
         //ToastView.instance.clear()
+        JQAlertVC.alertVC(vc: self, title: "提示", detailMsg: "我是提示信息", cancleTitle: nil, sureTitle: "确定", cancleCallback: { () -> () in }
+        , sureCallback: { ()->() in
+            debugLog("确定")
+        })
 
     }
 
