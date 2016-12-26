@@ -10,5 +10,6 @@
 #define Header_h
 
 import kingfisher
+import Const
 
 #endif /* Header_h */

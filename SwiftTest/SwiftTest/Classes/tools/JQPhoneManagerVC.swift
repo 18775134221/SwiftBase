@@ -63,9 +63,7 @@ class JQPhoneManagerVC: UIViewController {
         
         let request: NSURLRequest = NSURLRequest(url: url as URL)
         pMVC.webView?.loadRequest(request as URLRequest)
-        
-        
-        
+    
     }
 
     override func didReceiveMemoryWarning() {
