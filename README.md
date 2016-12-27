@@ -4,7 +4,7 @@
 - 2.自定义UITabBar ,按钮凸出的部分可以使用hitTest增加额外的点击事件
 - 3.新增新闻查看器
 
-# 一、161210 完成主框架的搭建
+## 一、161210 完成主框架的搭建
 
 - 1.UITabBar的自定义 
 
@@ -75,7 +75,7 @@ class BaseTabBar: UITabBar {
     
 }
 
-# 二、161212 完成网络请求工具的封装
+## 二、161212 完成网络请求工具的封装
 
 class NetworkTools: NSObject {
     
