@@ -37,6 +37,8 @@
 		04CDBFFB1DFB8AD500E427E1 /* TypesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CDBFFA1DFB8AD500E427E1 /* TypesVC.swift */; };
 		04CDBFFD1DFB8AF600E427E1 /* ShoppingCartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CDBFFC1DFB8AF600E427E1 /* ShoppingCartVC.swift */; };
 		04CDBFFF1DFB8B2500E427E1 /* MineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CDBFFE1DFB8B2500E427E1 /* MineVC.swift */; };
+		04DB75CE1E120D46009166BA /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB75CD1E120D46009166BA /* LoginAPI.swift */; };
+		04DB75D01E120FDA009166BA /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB75CF1E120FDA009166BA /* LoginViewModel.swift */; };
 		93FEF0CD34E2511269BC66B3 /* Pods_SwiftTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87C24B0A4FF7FA881ABE2DB1 /* Pods_SwiftTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +97,8 @@
 		04CDBFFA1DFB8AD500E427E1 /* TypesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypesVC.swift; sourceTree = "<group>"; };
 		04CDBFFC1DFB8AF600E427E1 /* ShoppingCartVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingCartVC.swift; sourceTree = "<group>"; };
 		04CDBFFE1DFB8B2500E427E1 /* MineVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineVC.swift; sourceTree = "<group>"; };
+		04DB75CD1E120D46009166BA /* LoginAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginAPI.swift; sourceTree = "<group>"; };
+		04DB75CF1E120FDA009166BA /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		13978AEF161BBA554E5E36D1 /* Pods-SwiftTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftTest/Pods-SwiftTest.release.xcconfig"; sourceTree = "<group>"; };
 		87C24B0A4FF7FA881ABE2DB1 /* Pods_SwiftTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B85DE797A7ED5D9B8C93746C /* Pods-SwiftTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftTest/Pods-SwiftTest.debug.xcconfig"; sourceTree = "<group>"; };
@@ -215,6 +219,8 @@
 		04CDBFD21DFB851500E427E1 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				04DB75CC1E120D30009166BA /* MineAPI */,
+				04DB75CB1E120CDC009166BA /* ViewModel */,
 				04CDBFEE1DFB876900E427E1 /* VC */,
 				04CDBFED1DFB876900E427E1 /* View */,
 				04CDBFEC1DFB876900E427E1 /* Model */,
@@ -401,6 +407,22 @@
 				048CD39F1DFBCDF2005EE060 /* UIColor-Extension.swift */,
 			);
 			path = Extention;
+			sourceTree = "<group>";
+		};
+		04DB75CB1E120CDC009166BA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				04DB75CF1E120FDA009166BA /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		04DB75CC1E120D30009166BA /* MineAPI */ = {
+			isa = PBXGroup;
+			children = (
+				04DB75CD1E120D46009166BA /* LoginAPI.swift */,
+			);
+			path = MineAPI;
 			sourceTree = "<group>";
 		};
 		23389D3A0CF188BA8625C59B /* Frameworks */ = {
@@ -615,6 +637,7 @@
 				044273781DED2AF600429A5A /* AppDelegate.swift in Sources */,
 				048CD3701DFBA83C005EE060 /* NetworkTools.swift in Sources */,
 				048CD3A41DFBD1B0005EE060 /* BaseTabBar.swift in Sources */,
+				04DB75CE1E120D46009166BA /* LoginAPI.swift in Sources */,
 				04C09EEE1E11404D00EE2491 /* Const.swift in Sources */,
 				04CDBFF11DFB889700E427E1 /* BaseNavigationVC.swift in Sources */,
 				04B8821C1E027B42000BAA0B /* ToastView.swift in Sources */,
@@ -623,6 +646,7 @@
 				048CD3A11DFBCDF2005EE060 /* UIBarButtonItem-Extension.swift in Sources */,
 				04CDBFF31DFB890000E427E1 /* BaseTabBarVC.swift in Sources */,
 				04CDBFFF1DFB8B2500E427E1 /* MineVC.swift in Sources */,
+				04DB75D01E120FDA009166BA /* LoginViewModel.swift in Sources */,
 				04CDBFF91DFB8AAC00E427E1 /* HomeVC.swift in Sources */,
 				04878BBB1E0142AA0019B271 /* JQPhoneManagerVC.swift in Sources */,
 				04B882171E021F88000BAA0B /* UITextView-Extension.swift in Sources */,

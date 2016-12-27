@@ -6,5 +6,7 @@ target 'SwiftTest' do
     
     pod 'Kingfisher', '~> 3.2.0'
     pod 'Alamofire', '~> 4.0.1'
+    pod 'RxCocoa', '~> 3.0.1'
+    pod 'RxSwift', '~> 3.0.1'
 
 end

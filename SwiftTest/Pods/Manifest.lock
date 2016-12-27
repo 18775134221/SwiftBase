@@ -1,15 +1,22 @@
 PODS:
   - Alamofire (4.0.1)
   - Kingfisher (3.2.0)
+  - RxCocoa (3.0.1):
+    - RxSwift (~> 3.0)
+  - RxSwift (3.0.1)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0.1)
   - Kingfisher (~> 3.2.0)
+  - RxCocoa (~> 3.0.1)
+  - RxSwift (~> 3.0.1)
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
   Kingfisher: 50407d1d5dbc34965009d425a286342ff36a84ea
+  RxCocoa: 15a52fc590dcc700cb4a690a633b5c5184ce3a78
+  RxSwift: af5680055c4ad04480189c52d28385b1029493a6
 
-PODFILE CHECKSUM: 38bbf99b4206d6b8c7add652cb90ab27208c82a7
+PODFILE CHECKSUM: 103cd83f8879d491e1b381ef67f10b91603dfa1a
 
 COCOAPODS: 1.1.1
