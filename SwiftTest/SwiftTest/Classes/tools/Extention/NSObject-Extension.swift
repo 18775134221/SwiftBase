@@ -17,25 +17,29 @@ extension NSObject {
             let fileManager = FileManager.default
             var isDirectory: ObjCBool = ObjCBool(false)
             let isFileExist = fileManager.fileExists(atPath: path, isDirectory: &isDirectory)
-            if isFileExist == false { return }
-            
-            if isDirectory.boolValue == true {
-                let subPaths: [String] = fileManager.subpaths(atPath: path)!
-                for subPath in subPaths {
-                    let filePath = NSURL(string: path)?.appendingPathComponent(subPath)
-                    var isDirectory: ObjCBool = ObjCBool(false)
-                    let isExistFile = fileManager.fileExists(atPath: "\(filePath)", isDirectory: &isDirectory)
-                    if isDirectory.boolValue == true && isExistFile == true && "\(filePath)".contains("DS") == false {
-                        let floder = try! fileManager.attributesOfItem(atPath: "\(filePath)")
-                        for (_, bcd) in floder {
-                            totalSize += (bcd as AnyObject).integerValue
-                        }
-                    }
-                }
-            } else {
+            guard isFileExist else { return }
+            guard isDirectory.boolValue else {
                 let floder = try! fileManager.attributesOfItem(atPath: path)
                 for (_, bcd) in floder {
                     totalSize += (bcd as AnyObject).integerValue
+                }
+                // 回到主线程
+                DispatchQueue.main.async {
+                    completionBlock(totalSize)
+                }
+                return
+            }
+            
+            let subPaths: [String] = fileManager.subpaths(atPath: path)!
+            for subPath in subPaths {
+                let filePath = NSURL(string: path)?.appendingPathComponent(subPath)
+                var isDirectory: ObjCBool = ObjCBool(false)
+                let isExistFile = fileManager.fileExists(atPath: "\(filePath)", isDirectory: &isDirectory)
+                if isDirectory.boolValue == true && isExistFile == true && "\(filePath)".contains("DS") == false {
+                    let floder = try! fileManager.attributesOfItem(atPath: "\(filePath)")
+                    for (_, bcd) in floder {
+                        totalSize += (bcd as AnyObject).integerValue
+                    }
                 }
             }
             // 回到主线程
@@ -66,20 +70,24 @@ extension NSObject {
             let path = cachesPath()
             var isDirectory: ObjCBool = ObjCBool(false)
             let isFileExist = fileManager.fileExists(atPath: path, isDirectory: &isDirectory)
-            if isFileExist == false { return }
-            if isDirectory.boolValue == true {
-                // 迭代器
-                let enumerator = fileManager.enumerator(atPath: path)
-                for subPath in enumerator! {
-                    let filePath = NSURL(string: path)?.appendingPathComponent(subPath as! String)
-                    // 移除文件或者文件夹
-                    try! fileManager.removeItem(at: filePath!)
-                    
-                }
+            guard isFileExist else { return }
+            guard isDirectory.boolValue else {
+                // 回到主线程
+                OperationQueue.main.addOperation({
+                    completionBlock()
+                })
+                return
             }
-            
+            // 迭代器
+            let enumerator = fileManager.enumerator(atPath: path)
+            for subPath in enumerator! {
+                let filePath = NSURL(string: path)?.appendingPathComponent(subPath as! String)
+                // 移除文件或者文件夹
+                try! fileManager.removeItem(at: filePath!)
+                
+            }
             // 回到主线程
-            OperationQueue.main.addOperation({ 
+            OperationQueue.main.addOperation({
                 completionBlock()
             })
         }
