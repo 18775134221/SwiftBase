@@ -9,10 +9,8 @@
 import UIKit
 
 class JQAlertVC: UIViewController {
-
-    // 单例
-//    static var shareInstance = JQAlertVC()
     
+    // MARK: - 弹窗
      class func alertVC(vc: UIViewController ,title: String? = nil, detailMsg: String? = nil, cancleTitle: String? = nil, sureTitle: String? = nil, cancleCallback: @escaping () -> ()?, sureCallback: @escaping () -> ()?) {
         
         let alertVC: UIAlertController = UIAlertController.init(title: title ?? nil, message: detailMsg ?? nil, preferredStyle: UIAlertControllerStyle.alert)
