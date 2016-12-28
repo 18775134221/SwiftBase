@@ -17,7 +17,7 @@ class JQAlertVC: UIViewController {
         
         let alertVC: UIAlertController = UIAlertController.init(title: title ?? nil, message: detailMsg ?? nil, preferredStyle: UIAlertControllerStyle.alert)
         
-        if cancleTitle != nil {
+        if let _ = cancleTitle {
             let cancleAction: UIAlertAction = UIAlertAction(title: cancleTitle, style: UIAlertActionStyle.default, handler: {(action:UIAlertAction) in
                 cancleCallback()
                 
@@ -26,7 +26,7 @@ class JQAlertVC: UIViewController {
             alertVC.addAction(cancleAction)
         }
 
-        if sureTitle != nil {
+        if let _ = sureTitle {
             let sureAction: UIAlertAction = UIAlertAction(title: sureTitle, style: UIAlertActionStyle.default, handler: {(action:UIAlertAction) in
                 sureCallback()
             })
