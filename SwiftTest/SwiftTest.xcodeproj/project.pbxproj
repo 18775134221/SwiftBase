@@ -40,6 +40,7 @@
 		04DB75CE1E120D46009166BA /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB75CD1E120D46009166BA /* LoginAPI.swift */; };
 		04DB75D01E120FDA009166BA /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB75CF1E120FDA009166BA /* LoginViewModel.swift */; };
 		04DB75D21E127952009166BA /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB75D11E127951009166BA /* StartView.swift */; };
+		04DB75D41E128D8D009166BA /* NSObject-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB75D31E128D8D009166BA /* NSObject-Extension.swift */; };
 		93FEF0CD34E2511269BC66B3 /* Pods_SwiftTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87C24B0A4FF7FA881ABE2DB1 /* Pods_SwiftTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +102,7 @@
 		04DB75CD1E120D46009166BA /* LoginAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginAPI.swift; sourceTree = "<group>"; };
 		04DB75CF1E120FDA009166BA /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		04DB75D11E127951009166BA /* StartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		04DB75D31E128D8D009166BA /* NSObject-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject-Extension.swift"; sourceTree = "<group>"; };
 		13978AEF161BBA554E5E36D1 /* Pods-SwiftTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftTest/Pods-SwiftTest.release.xcconfig"; sourceTree = "<group>"; };
 		87C24B0A4FF7FA881ABE2DB1 /* Pods_SwiftTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B85DE797A7ED5D9B8C93746C /* Pods-SwiftTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftTest/Pods-SwiftTest.debug.xcconfig"; sourceTree = "<group>"; };
@@ -408,6 +410,7 @@
 				048CD39D1DFBCDF2005EE060 /* NSDate-Extension.swift */,
 				048CD39E1DFBCDF2005EE060 /* UIBarButtonItem-Extension.swift */,
 				048CD39F1DFBCDF2005EE060 /* UIColor-Extension.swift */,
+				04DB75D31E128D8D009166BA /* NSObject-Extension.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -654,6 +657,7 @@
 				04CDBFF91DFB8AAC00E427E1 /* HomeVC.swift in Sources */,
 				04878BBB1E0142AA0019B271 /* JQPhoneManagerVC.swift in Sources */,
 				04B882171E021F88000BAA0B /* UITextView-Extension.swift in Sources */,
+				04DB75D41E128D8D009166BA /* NSObject-Extension.swift in Sources */,
 				048CD3A21DFBCDF2005EE060 /* UIColor-Extension.swift in Sources */,
 				048CD39B1DFBCD93005EE060 /* PageContentView.swift in Sources */,
 				04CDBFFB1DFB8AD500E427E1 /* TypesVC.swift in Sources */,
