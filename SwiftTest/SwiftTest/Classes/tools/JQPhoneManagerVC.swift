@@ -10,7 +10,6 @@ import UIKit
 
 // MARK: - 拨打电话
 class JQPhoneManagerVC: UIViewController {
-
     
     var  webView: UIWebView?
     
@@ -41,7 +40,7 @@ class JQPhoneManagerVC: UIViewController {
      */
     class func call(_ no: String?, _ inViewController: UIViewController?,failBlock: ()->()) {
     
-        guard no != nil else {
+        guard let _ = no else {
             failBlock()
             return
         }
@@ -49,21 +48,18 @@ class JQPhoneManagerVC: UIViewController {
         let noString: String = "tel://" + no!
         let url: NSURL = NSURL(string: noString)!;
         let canOpen: Bool? = UIApplication.shared.openURL(url as URL)
-        if canOpen == false { // 可选类型才可以使用可选绑定 对象才可以置空
+        guard canOpen! else { // 可选类型才可以使用可选绑定 对象才可以置空
             failBlock()
             return
         }
-        
+
         let pMVC: JQPhoneManagerVC = JQPhoneManagerVC()
         pMVC.view.alpha = 0
         pMVC.view.frame = CGRect.zero
         inViewController?.addChildViewController(pMVC)
-        
         inViewController?.view.addSubview(pMVC.view)
-        
         let request: NSURLRequest = NSURLRequest(url: url as URL)
         pMVC.webView?.loadRequest(request as URLRequest)
-    
     }
 
     override func didReceiveMemoryWarning() {
