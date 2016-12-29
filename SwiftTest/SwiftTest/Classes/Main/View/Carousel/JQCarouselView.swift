@@ -36,16 +36,19 @@ class JQCarouselView: UIView {
 
     weak var delegate: JQCarouselViewDelegate?
     
-    var needAutoPlay: AutoPlayStyle?
-    var pageControlPositionStyle: PageControlPositionStyle?
+    // 如果不强制解包会点不出对应的属性值
+    var needAutoPlay: AutoPlayStyle!
+    var pageControlPositionStyle: PageControlPositionStyle!
     
     // 添加定时器
     fileprivate var cycleTimer: Timer?
     
+    var isFirstLoad: Bool?
     // 图片数组
     var imageGroups: [String]? {
         didSet{
             
+            // 首尾各添加一张
             let first: String = (imageGroups?.first)!
             let last: String = (imageGroups?.last)!
             imageGroups?.insert(last, at: 0)
@@ -58,14 +61,18 @@ class JQCarouselView: UIView {
             pageControl.numberPageControls = (numbers - 2)
             
             // 3.默认滚动到中间某一个位置
-            let currentOffsetX = collectionView.contentOffset.x
-            let offsetX = currentOffsetX + collectionView.bounds.width
-            collectionView.setContentOffset(CGPoint(x: offsetX, y: 0), animated: false)
-            
+            perform(#selector(scrollIndex), with: nil, afterDelay: 0.0001)
+    
             // 4.添加定时器
             removeCycleTimer()
             addCycleTimer()
         }
+    }
+
+    @objc func scrollIndex() {
+        let indexPath = IndexPath(item: 1, section: 0)
+        collectionView.scrollToItem(at: indexPath, at: .left, animated: false)
+        pageControl.currentPageControl = 0
     }
     
     lazy var pageControl: JQPageControlView = {
@@ -93,7 +100,7 @@ class JQCarouselView: UIView {
     
     override init(frame: CGRect) {
         pageControlPositionStyle = .centerPosition
-        needAutoPlay = .noAutoPlay
+        needAutoPlay = .autoPlay
         imageGroups = [String]()
         super.init(frame: frame)
         setupUI()
@@ -135,11 +142,11 @@ class JQCarouselView: UIView {
         if pageControlPositionStyle == .none {
             pageControl.isHidden = true
         }else if pageControlPositionStyle == .centerPosition {
-            pageControlW = CGFloat(CGFloat(numbers) * kpageControlSize + CGFloat(numbers) * kpageControlSpace)
+            pageControlW = CGFloat(CGFloat(numbers - 2) * kpageControlSize + CGFloat(numbers - 2) * kpageControlSpace)
             pageControlX = (bounds.size.width - pageControlW!) / 2.0
         }else {
-            pageControlW = CGFloat(CGFloat(numbers) * kpageControlSize + CGFloat(numbers) * kpageControlSpace)
-            pageControlX = (bounds.size.width - pageControlW!) - 15
+            pageControlW = CGFloat(CGFloat(numbers - 2) * kpageControlSize + CGFloat(numbers - 2) * kpageControlSpace)
+            pageControlX = (bounds.size.width - pageControlW!)
         }
         let pageControlY: CGFloat = bounds.size.height - kpageControlSize - 10
         let pageControlH: CGFloat = kpageControlSize + 10
@@ -166,9 +173,9 @@ extension JQCarouselView: UICollectionViewDataSource {
 extension JQCarouselView : UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        debugLog("\(indexPath.item % imageGroups!.count)")
+        debugLog("\(indexPath.item - 1)")
         if let _ = delegate {
-            delegate?.jQCarouselViewSeletedIndex!(index: indexPath.item)
+            delegate?.jQCarouselViewSeletedIndex!(index: indexPath.item - 1)
         }
         
     }
@@ -179,8 +186,31 @@ extension JQCarouselView : UICollectionViewDelegate {
         let offsetX = scrollView.contentOffset.x + scrollView.bounds.width * 0.5
         
         // 2.计算pageControl的currentIndex
-        let currentIndex = Int(offsetX / scrollView.bounds.width) % (imageGroups?.count ?? 1)
-        pageControl.currentPageControl = currentIndex
+        let currentIndex = Int(offsetX / scrollView.bounds.width)
+        
+        if offsetX >= (collectionView.bounds.size.width * CGFloat((imageGroups?.count)! - 2)) {
+            pageControl.currentPageControl = 0;
+        }else if offsetX <= collectionView.bounds.size.width {
+           pageControl.currentPageControl = (imageGroups?.count)! - 1
+        }else {
+            pageControl.currentPageControl = currentIndex
+        }
+
+    }
+    
+    // 减速的时候调用
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let offsetX: Int = Int(scrollView.contentOffset.x)
+        
+        // 如果是第一张
+        if offsetX == 0 {
+            collectionView.setContentOffset(CGPoint(x: Int(Int(collectionView.bounds.size.width) * ((imageGroups?.count)! - 2)), y: 0), animated: false)
+        }
+        
+        // 如果是最后一张
+        if offsetX == Int(Int(collectionView.bounds.size.width) * ((imageGroups?.count)! - 1)) {
+            collectionView.setContentOffset(CGPoint(x: collectionView.bounds.size.width, y: 0), animated: false)
+        }
     }
     
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
@@ -209,14 +239,10 @@ extension JQCarouselView: JQPageControlViewDatasource {
 extension JQCarouselView: JQPageControlViewDlegate {
     func pageControlViewDidSelected(pageControlView: JQPageControlView, index: NSInteger) {
         addCycleTimer()
-        
-        // 1.获取滚动的偏移量
-        let currentOffsetX = collectionView.contentOffset.x
-        let currentSelected = Int(currentOffsetX / collectionView.bounds.width) % (imageGroups?.count ?? 1)
-        debugLog(currentSelected)
-        let offsetX = currentOffsetX + collectionView.bounds.width * CGFloat((index - currentSelected))
-        // 2.滚动该位置
-        collectionView.setContentOffset(CGPoint(x: offsetX, y: 0), animated: false)
+        debugLog("当前点击的是\(index)")
+        let indexPath = IndexPath(item: index + 1, section: 0)
+        collectionView.scrollToItem(at: indexPath, at: .left, animated: false)
+        pageControl.currentPageControl = index
     }
 }
 
@@ -232,7 +258,7 @@ extension JQCarouselView {
             cycleTimer = nil
         }
         
-        cycleTimer = Timer(timeInterval: 3.0, target: self, selector: #selector(self.scrollToNext), userInfo: nil, repeats: true)
+        cycleTimer = Timer(timeInterval: 10.0, target: self, selector: #selector(self.scrollToNext), userInfo: nil, repeats: true)
         RunLoop.main.add(cycleTimer!, forMode: RunLoopMode.commonModes)
 
 
@@ -248,10 +274,20 @@ extension JQCarouselView {
     @objc fileprivate func scrollToNext() {
         // 1.获取滚动的偏移量
         let currentOffsetX = collectionView.contentOffset.x
-        let offsetX = currentOffsetX + collectionView.bounds.width
+        let offsetX = Int(currentOffsetX + collectionView.bounds.width)
         
-        // 2.滚动该位置
-        collectionView.setContentOffset(CGPoint(x: offsetX, y: 0), animated: true)
+        
+        //let offsetX: Int = Int(scrollView.contentOffset.x)
+        
+        // 如果是第一张
+        if offsetX == 0 {
+            collectionView.setContentOffset(CGPoint(x: Int(Int(collectionView.bounds.size.width) * ((imageGroups?.count)! - 2)), y: 0), animated: false)
+        }else if offsetX == Int(Int(collectionView.bounds.size.width) * ((imageGroups?.count)! - 1)) {
+            collectionView.setContentOffset(CGPoint(x: collectionView.bounds.size.width, y: 0), animated: false)
+        }else {
+            // 2.滚动该位置
+            collectionView.setContentOffset(CGPoint(x: offsetX, y: 0), animated: true)
+        }
     }
  
 }

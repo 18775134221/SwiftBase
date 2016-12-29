@@ -120,11 +120,8 @@ class JQPageControlView: UIView {
             let tap: UITapGestureRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(tapAction(tapGet:)))
             pointImageV.addGestureRecognizer(tap)
         }
-        
         // 默认选中第一个
         currentPageControl = 0
-        
-        debugLog("当前  \(bounds)")
     }
     
     @objc fileprivate func tapAction(tapGet: UITapGestureRecognizer) {

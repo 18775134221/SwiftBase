@@ -28,9 +28,6 @@ class ShoppingCartVC: BaseVC {
         images.append("1")
         images.append("2")
         images.append("3")
-        images.append("1")
-        images.append("2")
-        images.append("3")
         Carouselview.imageGroups = images
 
         
