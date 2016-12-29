@@ -18,7 +18,6 @@ class BaseTabBar: UITabBar {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
         let count: Int = (items?.count)! + 1
         let btnW: CGFloat = UIScreen.main.bounds.size.width / CGFloat(count)
         let btnH: CGFloat = 49.0;
@@ -31,8 +30,6 @@ class BaseTabBar: UITabBar {
                 }
                 button.frame = CGRect(x: btnW * CGFloat(i), y: 0, width: btnW, height: btnH)
                 i += 1
-                
-            
             }
             
             if type == .plusDefault {

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		040050F81E13477700D1A384 /* UIImage-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040050F71E13477700D1A384 /* UIImage-Extension.swift */; };
 		040050FA1E134E8F00D1A384 /* UIView-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040050F91E134E8F00D1A384 /* UIView-Extension.swift */; };
+		040050FD1E135C5000D1A384 /* JQCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040050FC1E135C5000D1A384 /* JQCarouselView.swift */; };
+		040050FF1E135C9700D1A384 /* JQCarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040050FE1E135C9700D1A384 /* JQCarouselCell.swift */; };
 		044273781DED2AF600429A5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044273771DED2AF600429A5A /* AppDelegate.swift */; };
 		0442737F1DED2AF600429A5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0442737E1DED2AF600429A5A /* Assets.xcassets */; };
 		0442738D1DED2AF600429A5A /* SwiftTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0442738C1DED2AF600429A5A /* SwiftTestTests.swift */; };
@@ -22,11 +24,14 @@
 		048CD3A11DFBCDF2005EE060 /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048CD39E1DFBCDF2005EE060 /* UIBarButtonItem-Extension.swift */; };
 		048CD3A21DFBCDF2005EE060 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048CD39F1DFBCDF2005EE060 /* UIColor-Extension.swift */; };
 		048CD3A41DFBD1B0005EE060 /* BaseTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048CD3A31DFBD1B0005EE060 /* BaseTabBar.swift */; };
+		049E3AD31E13CEC4004146C7 /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E3AD21E13CEC4004146C7 /* TestVC.swift */; };
+		049E3AD51E13E7A1004146C7 /* JQPageControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E3AD41E13E7A1004146C7 /* JQPageControlView.swift */; };
 		04B882171E021F88000BAA0B /* UITextView-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B882161E021F88000BAA0B /* UITextView-Extension.swift */; };
 		04B8821C1E027B42000BAA0B /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8821B1E027B42000BAA0B /* ToastView.swift */; };
 		04B8821E1E027B6E000BAA0B /* FileAnimationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8821D1E027B6E000BAA0B /* FileAnimationUtil.swift */; };
 		04C09EEE1E11404D00EE2491 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C09EED1E11404D00EE2491 /* Const.swift */; };
 		04C129A31DFFD943007832FB /* WKDelegateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C129A21DFFD943007832FB /* WKDelegateVC.swift */; };
+		04C2A8291E13B01E0076B58D /* Timer-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2A8281E13B01E0076B58D /* Timer-Extension.swift */; };
 		04CDBFD91DFB863000E427E1 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CDBFD81DFB863000E427E1 /* Home.storyboard */; };
 		04CDBFDB1DFB864400E427E1 /* Types.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CDBFDA1DFB864400E427E1 /* Types.storyboard */; };
 		04CDBFDD1DFB866000E427E1 /* ShoppingCart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CDBFDC1DFB866000E427E1 /* ShoppingCart.storyboard */; };
@@ -66,6 +71,8 @@
 /* Begin PBXFileReference section */
 		040050F71E13477700D1A384 /* UIImage-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage-Extension.swift"; sourceTree = "<group>"; };
 		040050F91E134E8F00D1A384 /* UIView-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView-Extension.swift"; sourceTree = "<group>"; };
+		040050FC1E135C5000D1A384 /* JQCarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JQCarouselView.swift; sourceTree = "<group>"; };
+		040050FE1E135C9700D1A384 /* JQCarouselCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JQCarouselCell.swift; sourceTree = "<group>"; };
 		044273741DED2AF600429A5A /* SwiftTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		044273771DED2AF600429A5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0442737E1DED2AF600429A5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -85,11 +92,14 @@
 		048CD39E1DFBCDF2005EE060 /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
 		048CD39F1DFBCDF2005EE060 /* UIColor-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
 		048CD3A31DFBD1B0005EE060 /* BaseTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBar.swift; sourceTree = "<group>"; };
+		049E3AD21E13CEC4004146C7 /* TestVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
+		049E3AD41E13E7A1004146C7 /* JQPageControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JQPageControlView.swift; sourceTree = "<group>"; };
 		04B882161E021F88000BAA0B /* UITextView-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView-Extension.swift"; sourceTree = "<group>"; };
 		04B8821B1E027B42000BAA0B /* ToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		04B8821D1E027B6E000BAA0B /* FileAnimationUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileAnimationUtil.swift; sourceTree = "<group>"; };
 		04C09EED1E11404D00EE2491 /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		04C129A21DFFD943007832FB /* WKDelegateVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKDelegateVC.swift; sourceTree = "<group>"; };
+		04C2A8281E13B01E0076B58D /* Timer-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Timer-Extension.swift"; sourceTree = "<group>"; };
 		04CDBFD01DFB83E900E427E1 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		04CDBFD81DFB863000E427E1 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		04CDBFDA1DFB864400E427E1 /* Types.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Types.storyboard; sourceTree = "<group>"; };
@@ -138,6 +148,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		040050FB1E135BFE00D1A384 /* Carousel */ = {
+			isa = PBXGroup;
+			children = (
+				040050FC1E135C5000D1A384 /* JQCarouselView.swift */,
+				040050FE1E135C9700D1A384 /* JQCarouselCell.swift */,
+				04C2A8281E13B01E0076B58D /* Timer-Extension.swift */,
+				049E3AD41E13E7A1004146C7 /* JQPageControlView.swift */,
+			);
+			path = Carousel;
+			sourceTree = "<group>";
+		};
 		0442736B1DED2AF600429A5A = {
 			isa = PBXGroup;
 			children = (
@@ -299,6 +320,7 @@
 		04CDBFE11DFB873C00E427E1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				040050FB1E135BFE00D1A384 /* Carousel */,
 				048CD3991DFBCD93005EE060 /* PageContentView.swift */,
 				048CD39A1DFBCD93005EE060 /* PageTitleView.swift */,
 				048CD3A31DFBD1B0005EE060 /* BaseTabBar.swift */,
@@ -381,6 +403,7 @@
 			isa = PBXGroup;
 			children = (
 				04CDBFFC1DFB8AF600E427E1 /* ShoppingCartVC.swift */,
+				049E3AD21E13CEC4004146C7 /* TestVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -657,11 +680,13 @@
 				048CD39C1DFBCD93005EE060 /* PageTitleView.swift in Sources */,
 				04CDBFFD1DFB8AF600E427E1 /* ShoppingCartVC.swift in Sources */,
 				048CD3A11DFBCDF2005EE060 /* UIBarButtonItem-Extension.swift in Sources */,
+				049E3AD51E13E7A1004146C7 /* JQPageControlView.swift in Sources */,
 				04CDBFF31DFB890000E427E1 /* BaseTabBarVC.swift in Sources */,
 				040050F81E13477700D1A384 /* UIImage-Extension.swift in Sources */,
 				04CDBFFF1DFB8B2500E427E1 /* MineVC.swift in Sources */,
 				04DB75D01E120FDA009166BA /* LoginViewModel.swift in Sources */,
 				04CDBFF91DFB8AAC00E427E1 /* HomeVC.swift in Sources */,
+				040050FD1E135C5000D1A384 /* JQCarouselView.swift in Sources */,
 				04878BBB1E0142AA0019B271 /* JQPhoneManagerVC.swift in Sources */,
 				04B882171E021F88000BAA0B /* UITextView-Extension.swift in Sources */,
 				04DB75D41E128D8D009166BA /* NSObject-Extension.swift in Sources */,
@@ -671,8 +696,11 @@
 				04B8821E1E027B6E000BAA0B /* FileAnimationUtil.swift in Sources */,
 				040050FA1E134E8F00D1A384 /* UIView-Extension.swift in Sources */,
 				048CD3A01DFBCDF2005EE060 /* NSDate-Extension.swift in Sources */,
+				04C2A8291E13B01E0076B58D /* Timer-Extension.swift in Sources */,
+				040050FF1E135C9700D1A384 /* JQCarouselCell.swift in Sources */,
 				04CDBFF71DFB895400E427E1 /* BaseTableVC.swift in Sources */,
 				04CDBFF51DFB892000E427E1 /* BaseVC.swift in Sources */,
+				049E3AD31E13CEC4004146C7 /* TestVC.swift in Sources */,
 				04C129A31DFFD943007832FB /* WKDelegateVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -813,7 +841,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SwiftTest/SwiftTestTests/Header.h";
 				INFOPLIST_FILE = SwiftTest/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fzf.SwiftTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -836,7 +864,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SwiftTest/SwiftTestTests/Header.h";
 				INFOPLIST_FILE = SwiftTest/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fzf.SwiftTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
