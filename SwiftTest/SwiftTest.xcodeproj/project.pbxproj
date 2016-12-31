@@ -15,6 +15,9 @@
 		0442737F1DED2AF600429A5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0442737E1DED2AF600429A5A /* Assets.xcassets */; };
 		0442738D1DED2AF600429A5A /* SwiftTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0442738C1DED2AF600429A5A /* SwiftTestTests.swift */; };
 		044273981DED2AF600429A5A /* SwiftTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044273971DED2AF600429A5A /* SwiftTestUITests.swift */; };
+		0463EB2F1E175C6200CC255A /* SQLiteDatabaseTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0463EB2E1E175C6200CC255A /* SQLiteDatabaseTool.swift */; };
+		0463EB311E175D2200CC255A /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0463EB301E175D2200CC255A /* libsqlite3.tbd */; };
+		0463EB371E1781C900CC255A /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0463EB361E1781C900CC255A /* libsqlite3.0.tbd */; };
 		046EA4391E036C8200FDCAE6 /* JQAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EA4381E036C8200FDCAE6 /* JQAlertVC.swift */; };
 		04878BBB1E0142AA0019B271 /* JQPhoneManagerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04878BBA1E0142AA0019B271 /* JQPhoneManagerVC.swift */; };
 		048CD3701DFBA83C005EE060 /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048CD36F1DFBA83C005EE060 /* NetworkTools.swift */; };
@@ -83,6 +86,10 @@
 		044273931DED2AF600429A5A /* SwiftTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		044273971DED2AF600429A5A /* SwiftTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTestUITests.swift; sourceTree = "<group>"; };
 		044273991DED2AF600429A5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0463EB2E1E175C6200CC255A /* SQLiteDatabaseTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteDatabaseTool.swift; sourceTree = "<group>"; };
+		0463EB301E175D2200CC255A /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		0463EB321E1761D600CC255A /* SwiftTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		0463EB361E1781C900CC255A /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		046EA4381E036C8200FDCAE6 /* JQAlertVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JQAlertVC.swift; sourceTree = "<group>"; };
 		04878BBA1E0142AA0019B271 /* JQPhoneManagerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JQPhoneManagerVC.swift; sourceTree = "<group>"; };
 		048CD36F1DFBA83C005EE060 /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
@@ -127,6 +134,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0463EB371E1781C900CC255A /* libsqlite3.0.tbd in Frameworks */,
+				0463EB311E175D2200CC255A /* libsqlite3.tbd in Frameworks */,
 				93FEF0CD34E2511269BC66B3 /* Pods_SwiftTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,6 +224,15 @@
 			path = SwiftTestUITests;
 			sourceTree = "<group>";
 		};
+		0463EB2D1E175C3600CC255A /* SQLite */ = {
+			isa = PBXGroup;
+			children = (
+				0463EB2E1E175C6200CC255A /* SQLiteDatabaseTool.swift */,
+				0463EB321E1761D600CC255A /* SwiftTest-Bridging-Header.h */,
+			);
+			path = SQLite;
+			sourceTree = "<group>";
+		};
 		04B882181E026E90000BAA0B /* HUD */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +245,7 @@
 		04C09EE91E113EE800EE2491 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				0463EB2D1E175C3600CC255A /* SQLite */,
 				04C09EED1E11404D00EE2491 /* Const.swift */,
 			);
 			path = Tools;
@@ -463,6 +482,8 @@
 		23389D3A0CF188BA8625C59B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0463EB361E1781C900CC255A /* libsqlite3.0.tbd */,
+				0463EB301E175D2200CC255A /* libsqlite3.tbd */,
 				87C24B0A4FF7FA881ABE2DB1 /* Pods_SwiftTest.framework */,
 			);
 			name = Frameworks;
@@ -673,6 +694,7 @@
 				048CD3701DFBA83C005EE060 /* NetworkTools.swift in Sources */,
 				048CD3A41DFBD1B0005EE060 /* BaseTabBar.swift in Sources */,
 				04DB75CE1E120D46009166BA /* LoginAPI.swift in Sources */,
+				0463EB2F1E175C6200CC255A /* SQLiteDatabaseTool.swift in Sources */,
 				04DB75D21E127952009166BA /* StartView.swift in Sources */,
 				04C09EEE1E11404D00EE2491 /* Const.swift in Sources */,
 				04CDBFF11DFB889700E427E1 /* BaseNavigationVC.swift in Sources */,
@@ -841,12 +863,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SwiftTest/SwiftTestTests/Header.h";
 				INFOPLIST_FILE = SwiftTest/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fzf.SwiftTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INSTALL_OBJC_HEADER = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftTest/Classes/Main/Tools/SQLite/SwiftTest-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -864,12 +886,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SwiftTest/SwiftTestTests/Header.h";
 				INFOPLIST_FILE = SwiftTest/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fzf.SwiftTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INSTALL_OBJC_HEADER = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftTest/Classes/Main/Tools/SQLite/SwiftTest-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
