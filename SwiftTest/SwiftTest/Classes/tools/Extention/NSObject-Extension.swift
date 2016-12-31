@@ -31,12 +31,12 @@ extension NSObject {
             
             let subPaths: [String] = fileManager.subpaths(atPath: path)!
             for subPath in subPaths {
-                let filePath = NSURL(string: path)?.appendingPathComponent(subPath)
+                let filePath = NSURL(string: path)!.appendingPathComponent(subPath)!
                 var isDirectory: ObjCBool = false
-                let isExistFile = fileManager.fileExists(atPath: "\(filePath!)", isDirectory: &isDirectory)
+                let isExistFile = fileManager.fileExists(atPath: "\(filePath)", isDirectory: &isDirectory)
                 let flag = isDirectory.boolValue == true && isExistFile == true
                 if  flag {
-                    let attr = try! fileManager.attributesOfItem(atPath:"\(filePath!)" )
+                    let attr = try! fileManager.attributesOfItem(atPath:"\(filePath)")
                     let fileSize: UInt64 = attr[FileAttributeKey.size] as! UInt64
                     debugLog(fileSize)
                     totalSize += fileSize
