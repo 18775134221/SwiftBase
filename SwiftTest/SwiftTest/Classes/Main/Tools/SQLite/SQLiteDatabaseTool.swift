@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FMDB
+import Realm
 
 class SQLiteDatabaseTool: NSObject {
     
@@ -39,8 +41,7 @@ class SQLiteDatabaseTool: NSObject {
     func openDB(SQLiteName: String)
     {
         // 0.拿到数据库的路径
-        let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).last!
-        print(path)
+        let path = SQLiteName.docDir()
         let cPath = path.cString(using: String.Encoding.utf8)!
         // 1.打开数据库
         /*
