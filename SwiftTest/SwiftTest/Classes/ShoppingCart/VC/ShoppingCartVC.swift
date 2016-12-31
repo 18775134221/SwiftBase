@@ -25,9 +25,8 @@ class ShoppingCartVC: BaseVC {
         view.addConstraints(constraintArray)
         
         var images: [String] = [String]()
-        images.append("1")
-        images.append("2")
-        images.append("3")
+        images.append("https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1483148459&di=7771f39fded7c9f497581018a8293dc2&src=http://g.hiphotos.baidu.com/lvpics/h=800/sign=88930a220e2442a7b10ef0a5e142ad95/29381f30e924b899bfc349996f061d950b7bf697.jpg")
+        images.append("https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1483148459&di=7771f39fded7c9f497581018a8293dc2&src=http://g.hiphotos.baidu.com/lvpics/h=800/sign=88930a220e2442a7b10ef0a5e142ad95/29381f30e924b899bfc349996f061d950b7bf697.jpg")
         Carouselview.imageGroups = images
 
         
