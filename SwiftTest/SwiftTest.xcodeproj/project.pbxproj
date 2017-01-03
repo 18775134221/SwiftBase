@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		040050F81E13477700D1A384 /* UIImage-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040050F71E13477700D1A384 /* UIImage-Extension.swift */; };
-		040050FA1E134E8F00D1A384 /* UIView-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040050F91E134E8F00D1A384 /* UIView-Extension.swift */; };
 		040050FD1E135C5000D1A384 /* JQCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040050FC1E135C5000D1A384 /* JQCarouselView.swift */; };
 		040050FF1E135C9700D1A384 /* JQCarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040050FE1E135C9700D1A384 /* JQCarouselCell.swift */; };
 		044273781DED2AF600429A5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044273771DED2AF600429A5A /* AppDelegate.swift */; };
@@ -79,7 +78,6 @@
 
 /* Begin PBXFileReference section */
 		040050F71E13477700D1A384 /* UIImage-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage-Extension.swift"; sourceTree = "<group>"; };
-		040050F91E134E8F00D1A384 /* UIView-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView-Extension.swift"; sourceTree = "<group>"; };
 		040050FC1E135C5000D1A384 /* JQCarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JQCarouselView.swift; sourceTree = "<group>"; };
 		040050FE1E135C9700D1A384 /* JQCarouselCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JQCarouselCell.swift; sourceTree = "<group>"; };
 		044273741DED2AF600429A5A /* SwiftTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -500,7 +498,6 @@
 				048CD39F1DFBCDF2005EE060 /* UIColor-Extension.swift */,
 				04DB75D31E128D8D009166BA /* NSObject-Extension.swift */,
 				040050F71E13477700D1A384 /* UIImage-Extension.swift */,
-				040050F91E134E8F00D1A384 /* UIView-Extension.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -763,7 +760,6 @@
 				048CD39B1DFBCD93005EE060 /* PageContentView.swift in Sources */,
 				04CDBFFB1DFB8AD500E427E1 /* TypesVC.swift in Sources */,
 				04B8821E1E027B6E000BAA0B /* FileAnimationUtil.swift in Sources */,
-				040050FA1E134E8F00D1A384 /* UIView-Extension.swift in Sources */,
 				048CD3A01DFBCDF2005EE060 /* NSDate-Extension.swift in Sources */,
 				04C2A8291E13B01E0076B58D /* Timer-Extension.swift in Sources */,
 				040050FF1E135C9700D1A384 /* JQCarouselCell.swift in Sources */,

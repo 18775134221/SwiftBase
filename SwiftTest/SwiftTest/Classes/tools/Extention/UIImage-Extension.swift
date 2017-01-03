@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 extension UIImage {
+    
     // MARK: - 根据颜色创建Image
     class func createImage(color: UIColor) -> UIImage {
         let rect: CGRect = CGRect(x: 0, y: 0, width: 1, height: 1)

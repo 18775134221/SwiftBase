@@ -13,6 +13,7 @@ extension NSObject {
     // MARK: - 获取文件的Size
     class func getFileSize(path: String,completionBlock:@escaping (_ totalSize: UInt64) -> ()) {
         DispatchQueue.global().async { // 子线程中处理耗时操作
+            debugLog(path)
             var totalSize: UInt64 = 0
             let fileManager = FileManager.default
             var isDirectory: ObjCBool = false
@@ -30,15 +31,17 @@ extension NSObject {
             }
             
             let subPaths: [String] = fileManager.subpaths(atPath: path)!
+            debugLog(subPaths)
             for subPath in subPaths {
+                
                 let filePath = NSURL(string: path)!.appendingPathComponent(subPath)!
                 var isDirectory: ObjCBool = false
+                //debugLog("\(filePath)")
                 let isExistFile = fileManager.fileExists(atPath: "\(filePath)", isDirectory: &isDirectory)
                 let flag = isDirectory.boolValue == true && isExistFile == true
                 if  flag {
                     let attr = try! fileManager.attributesOfItem(atPath:"\(filePath)")
                     let fileSize: UInt64 = attr[FileAttributeKey.size] as! UInt64
-                    debugLog(fileSize)
                     totalSize += fileSize
                     
                 }
@@ -56,7 +59,7 @@ extension NSObject {
     
     // MARK: - 获取缓存的目录
     class func cachesPath() -> String {
-        return NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).last!
+        return NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).first!
 
     }
     
@@ -84,7 +87,7 @@ extension NSObject {
             for subPath in enumerator! {
                 let filePath = NSURL(string: path)?.appendingPathComponent(subPath as! String)
                 // 移除文件或者文件夹
-                try! fileManager.removeItem(at: filePath!)
+                try? fileManager.removeItem(at: filePath!)
                 
             }
             // 回到主线程
