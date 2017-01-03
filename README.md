@@ -2,7 +2,17 @@
 
 - 1.使用UITabBarController + 4NavigationViewControll的方式
 - 2.自定义UITabBar ,按钮凸出的部分可以使用hitTest增加额外的点击事件
-- 3.新增新闻查看器
+- 3.新闻查看器
+- 4.then协议
+- 5.Toast
+- 6. 拨打电话工具
+- 7.常用的数据存储方式（Realm、FMDB、Coredata、Sqlite）
+- 8.清除缓存工具
+- 9.RXCocoa+RXSwift 封装Alamofire网络请求工具和常见的使用方法
+- 10.广告图轮播
+- 11.UITextView 设置placeholder的方法
+- 12.低版本使用UIStackView的方法
+- 13.缓存清理工具（待解决）
 
 ## 一、161210 完成主框架的搭建
 
