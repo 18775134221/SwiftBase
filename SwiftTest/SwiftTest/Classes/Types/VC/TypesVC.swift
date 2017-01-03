@@ -10,17 +10,22 @@ import UIKit
 
 class TypesVC: BaseVC {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    let label_AnyO = UILabel().then { (label) in
+        label.backgroundColor = .blue
+        label.font = UIFont.systemFont(ofSize: 18)
+        label.textAlignment = .center
+        label.text = "Then库写法_2"
+        label.frame = CGRect.init(x: 200, y: 260, width: 150, height: 40)
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupUI()
+    }
+
+    private func setupUI() {
+        view.addSubview(label_AnyO)
+    }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         JQPhoneManagerVC.call(nil, self, failBlock: {

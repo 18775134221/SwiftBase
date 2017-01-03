@@ -32,6 +32,7 @@
 		048CD3A11DFBCDF2005EE060 /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048CD39E1DFBCDF2005EE060 /* UIBarButtonItem-Extension.swift */; };
 		048CD3A21DFBCDF2005EE060 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048CD39F1DFBCDF2005EE060 /* UIColor-Extension.swift */; };
 		048CD3A41DFBD1B0005EE060 /* BaseTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048CD3A31DFBD1B0005EE060 /* BaseTabBar.swift */; };
+		049421151E1B3AC60020EACF /* JQThen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049421141E1B3AC60020EACF /* JQThen.swift */; };
 		049E3AD31E13CEC4004146C7 /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E3AD21E13CEC4004146C7 /* TestVC.swift */; };
 		049E3AD51E13E7A1004146C7 /* JQPageControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E3AD41E13E7A1004146C7 /* JQPageControlView.swift */; };
 		04B882171E021F88000BAA0B /* UITextView-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B882161E021F88000BAA0B /* UITextView-Extension.swift */; };
@@ -109,6 +110,7 @@
 		048CD39E1DFBCDF2005EE060 /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
 		048CD39F1DFBCDF2005EE060 /* UIColor-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
 		048CD3A31DFBD1B0005EE060 /* BaseTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBar.swift; sourceTree = "<group>"; };
+		049421141E1B3AC60020EACF /* JQThen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JQThen.swift; sourceTree = "<group>"; };
 		049E3AD21E13CEC4004146C7 /* TestVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
 		049E3AD41E13E7A1004146C7 /* JQPageControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JQPageControlView.swift; sourceTree = "<group>"; };
 		04B882161E021F88000BAA0B /* UITextView-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView-Extension.swift"; sourceTree = "<group>"; };
@@ -353,6 +355,7 @@
 				048CD36F1DFBA83C005EE060 /* NetworkTools.swift */,
 				04878BBA1E0142AA0019B271 /* JQPhoneManagerVC.swift */,
 				046EA4381E036C8200FDCAE6 /* JQAlertVC.swift */,
+				049421141E1B3AC60020EACF /* JQThen.swift */,
 			);
 			path = tools;
 			sourceTree = "<group>";
@@ -733,6 +736,7 @@
 				044273781DED2AF600429A5A /* AppDelegate.swift in Sources */,
 				048CD3701DFBA83C005EE060 /* NetworkTools.swift in Sources */,
 				048CD3A41DFBD1B0005EE060 /* BaseTabBar.swift in Sources */,
+				049421151E1B3AC60020EACF /* JQThen.swift in Sources */,
 				04DB75CE1E120D46009166BA /* LoginAPI.swift in Sources */,
 				0463EB2F1E175C6200CC255A /* SQLiteDatabaseTool.swift in Sources */,
 				04DB75D21E127952009166BA /* StartView.swift in Sources */,

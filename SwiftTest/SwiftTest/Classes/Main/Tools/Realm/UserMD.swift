@@ -7,23 +7,24 @@
 //
 
 import UIKit
-import Realm
+import RealmSwift
 
-class userMessageMD: RLMObject {
+class UserMessageMD: Object {
     dynamic var title: String?
     dynamic var messageID: String!
 }
 
-class UserMD: RLMObject {
+class UserMD: Object {
     dynamic var userID: String!
     dynamic var name: String!
     
     // List 是个泛型
-    //var userMessages = List<userMessageMD>()
+    var userMessages = List<UserMessageMD>()
     
     // MARK: - 设置主键
-//    override static func primaryKey() -> Int? {
-//        return "userID"
-//    }
+    override static func primaryKey() -> String? {
+        return "userID"
+    }
+
 }
 

@@ -50,8 +50,8 @@ class ShoppingCartVC: BaseVC {
 //            debugLog("确定")
 //        })
         
-//        let VC: TestVC = UIStoryboard.init(name: "ShoppingCart", bundle: nil).instantiateViewController(withIdentifier: "TestVC") as! TestVC
-//        navigationController?.pushViewController(VC, animated: true)
+        let VC: TestVC = UIStoryboard.init(name: "ShoppingCart", bundle: nil).instantiateViewController(withIdentifier: "TestVC") as! TestVC
+        navigationController?.pushViewController(VC, animated: true)
 
     }
 
