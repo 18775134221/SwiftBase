@@ -13,6 +13,7 @@ class HomeVC: BaseVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+  
         openUrl()
         
         NSObject.getFileSize(path: NSObject.cachesPath(), completionBlock: { (size) in
@@ -28,6 +29,12 @@ class HomeVC: BaseVC {
     
     private func setupUI() {
         
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let VC: UIViewController = UIViewController()
+        VC.view.backgroundColor = UIColor.gray
+        navigationController?.pushViewController(VC, animated: true)
     }
     
     private func openUrl() {

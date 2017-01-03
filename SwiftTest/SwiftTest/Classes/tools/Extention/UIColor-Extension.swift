@@ -26,9 +26,7 @@ extension UIColor {
         return self.withAlphaComponent(alpha)
     }
     
-    
-    
-    
+    // MARK: - 根据十六进制获取颜色
     class func RGB(_ rgbValue: String) -> UIColor? {
         
         ///  支持格式包括： #ff21af64   #21af64   0x21af64

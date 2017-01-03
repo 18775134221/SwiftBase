@@ -33,6 +33,7 @@ extension String{
         return path.appendingPathComponent((self as NSString).lastPathComponent)
     }
     
+    // MARK: - 获取十六进制的值
     func hexValue() -> Int {
         let str = self.uppercased()
         var sum = 0
