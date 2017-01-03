@@ -20,6 +20,9 @@
 		0463EB371E1781C900CC255A /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0463EB361E1781C900CC255A /* libsqlite3.0.tbd */; };
 		0463EB3E1E17880300CC255A /* FMDBDatabaseTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0463EB3D1E17880300CC255A /* FMDBDatabaseTool.swift */; };
 		0463EB401E1789CC00CC255A /* String-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0463EB3F1E1789CC00CC255A /* String-Extension.swift */; };
+		0463EB421E179A0100CC255A /* RealmDataBaseTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0463EB411E179A0100CC255A /* RealmDataBaseTool.swift */; };
+		0463EB441E179D7800CC255A /* UserMD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0463EB431E179D7800CC255A /* UserMD.swift */; };
+		0463EB471E17ADCC00CC255A /* CoreDataTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0463EB461E17ADCC00CC255A /* CoreDataTool.swift */; };
 		046EA4391E036C8200FDCAE6 /* JQAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EA4381E036C8200FDCAE6 /* JQAlertVC.swift */; };
 		04878BBB1E0142AA0019B271 /* JQPhoneManagerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04878BBA1E0142AA0019B271 /* JQPhoneManagerVC.swift */; };
 		048CD3701DFBA83C005EE060 /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048CD36F1DFBA83C005EE060 /* NetworkTools.swift */; };
@@ -94,6 +97,9 @@
 		0463EB361E1781C900CC255A /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		0463EB3D1E17880300CC255A /* FMDBDatabaseTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FMDBDatabaseTool.swift; sourceTree = "<group>"; };
 		0463EB3F1E1789CC00CC255A /* String-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String-Extension.swift"; sourceTree = "<group>"; };
+		0463EB411E179A0100CC255A /* RealmDataBaseTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmDataBaseTool.swift; sourceTree = "<group>"; };
+		0463EB431E179D7800CC255A /* UserMD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMD.swift; sourceTree = "<group>"; };
+		0463EB461E17ADCC00CC255A /* CoreDataTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataTool.swift; sourceTree = "<group>"; };
 		046EA4381E036C8200FDCAE6 /* JQAlertVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JQAlertVC.swift; sourceTree = "<group>"; };
 		04878BBA1E0142AA0019B271 /* JQPhoneManagerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JQPhoneManagerVC.swift; sourceTree = "<group>"; };
 		048CD36F1DFBA83C005EE060 /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
@@ -248,8 +254,18 @@
 		0463EB391E1787BC00CC255A /* Realm */ = {
 			isa = PBXGroup;
 			children = (
+				0463EB411E179A0100CC255A /* RealmDataBaseTool.swift */,
+				0463EB431E179D7800CC255A /* UserMD.swift */,
 			);
 			path = Realm;
+			sourceTree = "<group>";
+		};
+		0463EB451E17ADB000CC255A /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				0463EB461E17ADCC00CC255A /* CoreDataTool.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		04B882181E026E90000BAA0B /* HUD */ = {
@@ -264,6 +280,7 @@
 		04C09EE91E113EE800EE2491 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				0463EB451E17ADB000CC255A /* CoreData */,
 				0463EB391E1787BC00CC255A /* Realm */,
 				0463EB381E1787A300CC255A /* FMDB */,
 				0463EB2D1E175C3600CC255A /* SQLite */,
@@ -732,6 +749,8 @@
 				04DB75D01E120FDA009166BA /* LoginViewModel.swift in Sources */,
 				0463EB401E1789CC00CC255A /* String-Extension.swift in Sources */,
 				04CDBFF91DFB8AAC00E427E1 /* HomeVC.swift in Sources */,
+				0463EB441E179D7800CC255A /* UserMD.swift in Sources */,
+				0463EB471E17ADCC00CC255A /* CoreDataTool.swift in Sources */,
 				040050FD1E135C5000D1A384 /* JQCarouselView.swift in Sources */,
 				04878BBB1E0142AA0019B271 /* JQPhoneManagerVC.swift in Sources */,
 				04B882171E021F88000BAA0B /* UITextView-Extension.swift in Sources */,
@@ -745,6 +764,7 @@
 				04C2A8291E13B01E0076B58D /* Timer-Extension.swift in Sources */,
 				040050FF1E135C9700D1A384 /* JQCarouselCell.swift in Sources */,
 				04CDBFF71DFB895400E427E1 /* BaseTableVC.swift in Sources */,
+				0463EB421E179A0100CC255A /* RealmDataBaseTool.swift in Sources */,
 				04CDBFF51DFB892000E427E1 /* BaseVC.swift in Sources */,
 				049E3AD31E13CEC4004146C7 /* TestVC.swift in Sources */,
 				04C129A31DFFD943007832FB /* WKDelegateVC.swift in Sources */,

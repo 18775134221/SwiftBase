@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import FMDB
-import Realm
 
 class SQLiteDatabaseTool: NSObject {
     

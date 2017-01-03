@@ -7,26 +7,32 @@ PODS:
   - Realm (2.0.3):
     - Realm/Headers (= 2.0.3)
   - Realm/Headers (2.0.3)
+  - RealmSwift (2.0.3):
+    - Realm (= 2.0.3)
   - RxCocoa (3.0.1):
     - RxSwift (~> 3.0)
   - RxSwift (3.0.1)
+  - SnapKit (3.0.2)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0.1)
   - FMDB (~> 2.6.2)
   - Kingfisher (~> 3.2.0)
-  - Realm (~> 2.0.3)
+  - RealmSwift (~> 2.0.3)
   - RxCocoa (~> 3.0.1)
   - RxSwift (~> 3.0.1)
+  - SnapKit (~> 3.0.2)
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   Kingfisher: 50407d1d5dbc34965009d425a286342ff36a84ea
   Realm: 5f008bfe3c8c47142eddfc30b8c1584cde22db24
+  RealmSwift: 5afb451f65b682242f272dbb52d5c6f6e343c980
   RxCocoa: 15a52fc590dcc700cb4a690a633b5c5184ce3a78
   RxSwift: af5680055c4ad04480189c52d28385b1029493a6
+  SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
 
-PODFILE CHECKSUM: 97330ad82fd2fdb3970dc5a8c4b8ad22f107016f
+PODFILE CHECKSUM: f1d469a994b0e3b9aed1ae3afdd52b93cf7d57d0
 
 COCOAPODS: 1.1.1

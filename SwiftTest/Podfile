@@ -8,7 +8,9 @@ target 'SwiftTest' do
     pod 'Alamofire', '~> 4.0.1'
     pod 'RxCocoa', '~> 3.0.1'
     pod 'RxSwift', '~> 3.0.1'
-    pod 'Realm', '~> 2.0.3'
+    pod 'SnapKit', '~> 3.0.2'
+    pod 'RealmSwift', '~> 2.0.3'
     pod 'FMDB', '~> 2.6.2'
 
 end
+
