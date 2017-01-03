@@ -31,7 +31,6 @@ extension NSObject {
             }
             
             let subPaths: [String] = fileManager.subpaths(atPath: path)!
-            debugLog(subPaths)
             for subPath in subPaths {
                 
                 let filePath = NSURL(string: path)!.appendingPathComponent(subPath)!

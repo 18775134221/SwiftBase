@@ -32,6 +32,11 @@
 		048CD3A21DFBCDF2005EE060 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048CD39F1DFBCDF2005EE060 /* UIColor-Extension.swift */; };
 		048CD3A41DFBD1B0005EE060 /* BaseTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048CD3A31DFBD1B0005EE060 /* BaseTabBar.swift */; };
 		049421151E1B3AC60020EACF /* JQThen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049421141E1B3AC60020EACF /* JQThen.swift */; };
+		049421191E1B55550020EACF /* RuntimeCategory-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049421181E1B55550020EACF /* RuntimeCategory-Extension.swift */; };
+		0494211B1E1B569E0020EACF /* UIViewFrame-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0494211A1E1B569E0020EACF /* UIViewFrame-Extension.swift */; };
+		0494211D1E1B580B0020EACF /* UIWindow-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0494211C1E1B580B0020EACF /* UIWindow-Extension.swift */; };
+		049421211E1B58A30020EACF /* UIApplication-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049421201E1B58A30020EACF /* UIApplication-Extension.swift */; };
+		049421231E1B58E30020EACF /* FileManager-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049421221E1B58E30020EACF /* FileManager-Extension.swift */; };
 		049E3AD31E13CEC4004146C7 /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E3AD21E13CEC4004146C7 /* TestVC.swift */; };
 		049E3AD51E13E7A1004146C7 /* JQPageControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E3AD41E13E7A1004146C7 /* JQPageControlView.swift */; };
 		04B882171E021F88000BAA0B /* UITextView-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B882161E021F88000BAA0B /* UITextView-Extension.swift */; };
@@ -109,6 +114,11 @@
 		048CD39F1DFBCDF2005EE060 /* UIColor-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
 		048CD3A31DFBD1B0005EE060 /* BaseTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBar.swift; sourceTree = "<group>"; };
 		049421141E1B3AC60020EACF /* JQThen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JQThen.swift; sourceTree = "<group>"; };
+		049421181E1B55550020EACF /* RuntimeCategory-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RuntimeCategory-Extension.swift"; sourceTree = "<group>"; };
+		0494211A1E1B569E0020EACF /* UIViewFrame-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewFrame-Extension.swift"; sourceTree = "<group>"; };
+		0494211C1E1B580B0020EACF /* UIWindow-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow-Extension.swift"; sourceTree = "<group>"; };
+		049421201E1B58A30020EACF /* UIApplication-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication-Extension.swift"; sourceTree = "<group>"; };
+		049421221E1B58E30020EACF /* FileManager-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FileManager-Extension.swift"; sourceTree = "<group>"; };
 		049E3AD21E13CEC4004146C7 /* TestVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
 		049E3AD41E13E7A1004146C7 /* JQPageControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JQPageControlView.swift; sourceTree = "<group>"; };
 		04B882161E021F88000BAA0B /* UITextView-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView-Extension.swift"; sourceTree = "<group>"; };
@@ -498,6 +508,11 @@
 				048CD39F1DFBCDF2005EE060 /* UIColor-Extension.swift */,
 				04DB75D31E128D8D009166BA /* NSObject-Extension.swift */,
 				040050F71E13477700D1A384 /* UIImage-Extension.swift */,
+				049421181E1B55550020EACF /* RuntimeCategory-Extension.swift */,
+				0494211A1E1B569E0020EACF /* UIViewFrame-Extension.swift */,
+				0494211C1E1B580B0020EACF /* UIWindow-Extension.swift */,
+				049421201E1B58A30020EACF /* UIApplication-Extension.swift */,
+				049421221E1B58E30020EACF /* FileManager-Extension.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -742,6 +757,7 @@
 				04B8821C1E027B42000BAA0B /* ToastView.swift in Sources */,
 				048CD39C1DFBCD93005EE060 /* PageTitleView.swift in Sources */,
 				04CDBFFD1DFB8AF600E427E1 /* ShoppingCartVC.swift in Sources */,
+				0494211B1E1B569E0020EACF /* UIViewFrame-Extension.swift in Sources */,
 				048CD3A11DFBCDF2005EE060 /* UIBarButtonItem-Extension.swift in Sources */,
 				049E3AD51E13E7A1004146C7 /* JQPageControlView.swift in Sources */,
 				04CDBFF31DFB890000E427E1 /* BaseTabBarVC.swift in Sources */,
@@ -759,14 +775,18 @@
 				048CD3A21DFBCDF2005EE060 /* UIColor-Extension.swift in Sources */,
 				048CD39B1DFBCD93005EE060 /* PageContentView.swift in Sources */,
 				04CDBFFB1DFB8AD500E427E1 /* TypesVC.swift in Sources */,
+				049421211E1B58A30020EACF /* UIApplication-Extension.swift in Sources */,
 				04B8821E1E027B6E000BAA0B /* FileAnimationUtil.swift in Sources */,
 				048CD3A01DFBCDF2005EE060 /* NSDate-Extension.swift in Sources */,
+				049421191E1B55550020EACF /* RuntimeCategory-Extension.swift in Sources */,
+				0494211D1E1B580B0020EACF /* UIWindow-Extension.swift in Sources */,
 				04C2A8291E13B01E0076B58D /* Timer-Extension.swift in Sources */,
 				040050FF1E135C9700D1A384 /* JQCarouselCell.swift in Sources */,
 				04CDBFF71DFB895400E427E1 /* BaseTableVC.swift in Sources */,
 				0463EB421E179A0100CC255A /* RealmDataBaseTool.swift in Sources */,
 				04CDBFF51DFB892000E427E1 /* BaseVC.swift in Sources */,
 				049E3AD31E13CEC4004146C7 /* TestVC.swift in Sources */,
+				049421231E1B58E30020EACF /* FileManager-Extension.swift in Sources */,
 				04C129A31DFFD943007832FB /* WKDelegateVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
