@@ -67,7 +67,7 @@ class FMDBDatabaseTool: NSObject {
             let statuses: [Dictionary<String, Any>] = [Dictionary<String, Any>]()
             for dict in statuses
             {
-                let statusId = dict["id"]!
+                //let statusId = dict["id"]!
                 // JSON -> 二进制 -> 字符串
                 let data = try! JSONSerialization.data(withJSONObject: dict, options: JSONSerialization.WritingOptions.prettyPrinted)
                 let statusText = String(data: data, encoding: String.Encoding.utf8)!
@@ -78,7 +78,7 @@ class FMDBDatabaseTool: NSObject {
                 {
                     // 如果插入数据失败, 就回滚
                     // MARK: 不知道是什么问题回滚不能设置
-                    //rollback?.memory = true
+                    rollback!.pointee = true
                 }
                 
                 // 关闭数据库
