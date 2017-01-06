@@ -14,6 +14,7 @@
 		0442737F1DED2AF600429A5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0442737E1DED2AF600429A5A /* Assets.xcassets */; };
 		0442738D1DED2AF600429A5A /* SwiftTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0442738C1DED2AF600429A5A /* SwiftTestTests.swift */; };
 		044273981DED2AF600429A5A /* SwiftTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044273971DED2AF600429A5A /* SwiftTestUITests.swift */; };
+		0450DC9A1E1F1F8F001C7976 /* Barista.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0450DC991E1F1F8F001C7976 /* Barista.swift */; };
 		0463EB2F1E175C6200CC255A /* SQLiteDatabaseTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0463EB2E1E175C6200CC255A /* SQLiteDatabaseTool.swift */; };
 		0463EB311E175D2200CC255A /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0463EB301E175D2200CC255A /* libsqlite3.tbd */; };
 		0463EB371E1781C900CC255A /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0463EB361E1781C900CC255A /* libsqlite3.0.tbd */; };
@@ -95,6 +96,7 @@
 		044273931DED2AF600429A5A /* SwiftTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		044273971DED2AF600429A5A /* SwiftTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTestUITests.swift; sourceTree = "<group>"; };
 		044273991DED2AF600429A5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0450DC991E1F1F8F001C7976 /* Barista.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Barista.swift; sourceTree = "<group>"; };
 		0463EB2E1E175C6200CC255A /* SQLiteDatabaseTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteDatabaseTool.swift; sourceTree = "<group>"; };
 		0463EB301E175D2200CC255A /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		0463EB321E1761D600CC255A /* SwiftTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftTest-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -296,6 +298,7 @@
 				0463EB2D1E175C3600CC255A /* SQLite */,
 				04C09EED1E11404D00EE2491 /* Const.swift */,
 				0463EB3F1E1789CC00CC255A /* String-Extension.swift */,
+				0450DC991E1F1F8F001C7976 /* Barista.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -761,6 +764,7 @@
 				048CD3A11DFBCDF2005EE060 /* UIBarButtonItem-Extension.swift in Sources */,
 				049E3AD51E13E7A1004146C7 /* JQPageControlView.swift in Sources */,
 				04CDBFF31DFB890000E427E1 /* BaseTabBarVC.swift in Sources */,
+				0450DC9A1E1F1F8F001C7976 /* Barista.swift in Sources */,
 				040050F81E13477700D1A384 /* UIImage-Extension.swift in Sources */,
 				04CDBFFF1DFB8B2500E427E1 /* MineVC.swift in Sources */,
 				04DB75D01E120FDA009166BA /* LoginViewModel.swift in Sources */,
