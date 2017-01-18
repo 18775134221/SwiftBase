@@ -10,6 +10,7 @@
 		040050F81E13477700D1A384 /* UIImage-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040050F71E13477700D1A384 /* UIImage-Extension.swift */; };
 		040050FD1E135C5000D1A384 /* JQCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040050FC1E135C5000D1A384 /* JQCarouselView.swift */; };
 		040050FF1E135C9700D1A384 /* JQCarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040050FE1E135C9700D1A384 /* JQCarouselCell.swift */; };
+		043ECE8E1E2F189C00A6DCBE /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 043ECE8D1E2F189C00A6DCBE /* Alamofire.framework */; };
 		044273781DED2AF600429A5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044273771DED2AF600429A5A /* AppDelegate.swift */; };
 		0442737F1DED2AF600429A5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0442737E1DED2AF600429A5A /* Assets.xcassets */; };
 		0442738D1DED2AF600429A5A /* SwiftTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0442738C1DED2AF600429A5A /* SwiftTestTests.swift */; };
@@ -86,6 +87,8 @@
 		040050F71E13477700D1A384 /* UIImage-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage-Extension.swift"; sourceTree = "<group>"; };
 		040050FC1E135C5000D1A384 /* JQCarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JQCarouselView.swift; sourceTree = "<group>"; };
 		040050FE1E135C9700D1A384 /* JQCarouselCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JQCarouselCell.swift; sourceTree = "<group>"; };
+		043ECE8B1E2F182400A6DCBE /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/SwiftTest-bcexompyxttvkxeowzqdmerttkwu/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
+		043ECE8D1E2F189C00A6DCBE /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		044273741DED2AF600429A5A /* SwiftTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		044273771DED2AF600429A5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0442737E1DED2AF600429A5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -156,6 +159,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				043ECE8E1E2F189C00A6DCBE /* Alamofire.framework in Frameworks */,
 				0463EB371E1781C900CC255A /* libsqlite3.0.tbd in Frameworks */,
 				0463EB311E175D2200CC255A /* libsqlite3.tbd in Frameworks */,
 				93FEF0CD34E2511269BC66B3 /* Pods_SwiftTest.framework in Frameworks */,
@@ -539,6 +543,8 @@
 		23389D3A0CF188BA8625C59B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				043ECE8D1E2F189C00A6DCBE /* Alamofire.framework */,
+				043ECE8B1E2F182400A6DCBE /* Alamofire.framework */,
 				0463EB361E1781C900CC255A /* libsqlite3.0.tbd */,
 				0463EB301E175D2200CC255A /* libsqlite3.tbd */,
 				87C24B0A4FF7FA881ABE2DB1 /* Pods_SwiftTest.framework */,
@@ -568,6 +574,7 @@
 				044273721DED2AF600429A5A /* Resources */,
 				DF8C572AB76CC0C1BC798FA1 /* [CP] Embed Pods Frameworks */,
 				1465223EB2A14B0061A9567B /* [CP] Copy Pods Resources */,
+				043ECE8F1E2F19BE00A6DCBE /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -694,6 +701,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		043ECE8F1E2F19BE00A6DCBE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
 		1465223EB2A14B0061A9567B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -928,6 +949,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = A8X9HM6ZW7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SwiftTest/SwiftTestTests/Header.h";
 				INFOPLIST_FILE = SwiftTest/Info.plist;
@@ -951,6 +976,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = A8X9HM6ZW7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SwiftTest/SwiftTestTests/Header.h";
 				INFOPLIST_FILE = SwiftTest/Info.plist;

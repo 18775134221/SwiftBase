@@ -1,5 +1,4 @@
 PODS:
-  - Alamofire (4.0.1)
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
@@ -15,7 +14,6 @@ PODS:
   - SnapKit (3.0.2)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.0.1)
   - FMDB (~> 2.6.2)
   - Kingfisher (~> 3.2.0)
   - RealmSwift (~> 2.0.3)
@@ -24,7 +22,6 @@ DEPENDENCIES:
   - SnapKit (~> 3.0.2)
 
 SPEC CHECKSUMS:
-  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   Kingfisher: 50407d1d5dbc34965009d425a286342ff36a84ea
   Realm: 5f008bfe3c8c47142eddfc30b8c1584cde22db24
@@ -33,6 +30,6 @@ SPEC CHECKSUMS:
   RxSwift: af5680055c4ad04480189c52d28385b1029493a6
   SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
 
-PODFILE CHECKSUM: f1d469a994b0e3b9aed1ae3afdd52b93cf7d57d0
+PODFILE CHECKSUM: c3e6fa99c3fa805a8b84348a79b91c7cb12812a2
 
 COCOAPODS: 1.1.1
