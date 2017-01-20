@@ -41,6 +41,9 @@
 		049421231E1B58E30020EACF /* FileManager-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049421221E1B58E30020EACF /* FileManager-Extension.swift */; };
 		049C3FC51E31AD93000B2B8E /* UserDefaultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C3FC41E31AD93000B2B8E /* UserDefaultProtocol.swift */; };
 		049C3FC71E31B00F000B2B8E /* UserConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C3FC61E31B00F000B2B8E /* UserConfig.swift */; };
+		049C3FC91E31B5F7000B2B8E /* UITableView-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C3FC81E31B5F7000B2B8E /* UITableView-Extension.swift */; };
+		049C3FCB1E31B63F000B2B8E /* ResuableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C3FCA1E31B63F000B2B8E /* ResuableProtocol.swift */; };
+		049C3FCD1E31B69D000B2B8E /* ResuableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C3FCC1E31B69D000B2B8E /* ResuableCell.swift */; };
 		049E3AD31E13CEC4004146C7 /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E3AD21E13CEC4004146C7 /* TestVC.swift */; };
 		049E3AD51E13E7A1004146C7 /* JQPageControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E3AD41E13E7A1004146C7 /* JQPageControlView.swift */; };
 		04B882171E021F88000BAA0B /* UITextView-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B882161E021F88000BAA0B /* UITextView-Extension.swift */; };
@@ -128,6 +131,9 @@
 		049421221E1B58E30020EACF /* FileManager-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FileManager-Extension.swift"; sourceTree = "<group>"; };
 		049C3FC41E31AD93000B2B8E /* UserDefaultProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultProtocol.swift; sourceTree = "<group>"; };
 		049C3FC61E31B00F000B2B8E /* UserConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserConfig.swift; sourceTree = "<group>"; };
+		049C3FC81E31B5F7000B2B8E /* UITableView-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView-Extension.swift"; sourceTree = "<group>"; };
+		049C3FCA1E31B63F000B2B8E /* ResuableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResuableProtocol.swift; sourceTree = "<group>"; };
+		049C3FCC1E31B69D000B2B8E /* ResuableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResuableCell.swift; sourceTree = "<group>"; };
 		049E3AD21E13CEC4004146C7 /* TestVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
 		049E3AD41E13E7A1004146C7 /* JQPageControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JQPageControlView.swift; sourceTree = "<group>"; };
 		04B882161E021F88000BAA0B /* UITextView-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView-Extension.swift"; sourceTree = "<group>"; };
@@ -292,6 +298,7 @@
 			isa = PBXGroup;
 			children = (
 				049C3FC41E31AD93000B2B8E /* UserDefaultProtocol.swift */,
+				049C3FCA1E31B63F000B2B8E /* ResuableProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -415,6 +422,7 @@
 				048CD39A1DFBCD93005EE060 /* PageTitleView.swift */,
 				048CD3A31DFBD1B0005EE060 /* BaseTabBar.swift */,
 				04DB75D11E127951009166BA /* StartView.swift */,
+				049C3FCC1E31B69D000B2B8E /* ResuableCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -534,6 +542,7 @@
 				0494211C1E1B580B0020EACF /* UIWindow-Extension.swift */,
 				049421201E1B58A30020EACF /* UIApplication-Extension.swift */,
 				049421221E1B58E30020EACF /* FileManager-Extension.swift */,
+				049C3FC81E31B5F7000B2B8E /* UITableView-Extension.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -789,7 +798,9 @@
 				049421151E1B3AC60020EACF /* JQThen.swift in Sources */,
 				04DB75CE1E120D46009166BA /* LoginAPI.swift in Sources */,
 				0463EB2F1E175C6200CC255A /* SQLiteDatabaseTool.swift in Sources */,
+				049C3FC91E31B5F7000B2B8E /* UITableView-Extension.swift in Sources */,
 				04DB75D21E127952009166BA /* StartView.swift in Sources */,
+				049C3FCB1E31B63F000B2B8E /* ResuableProtocol.swift in Sources */,
 				04C09EEE1E11404D00EE2491 /* Const.swift in Sources */,
 				04CDBFF11DFB889700E427E1 /* BaseNavigationVC.swift in Sources */,
 				04B8821C1E027B42000BAA0B /* ToastView.swift in Sources */,
@@ -798,6 +809,7 @@
 				0494211B1E1B569E0020EACF /* UIViewFrame-Extension.swift in Sources */,
 				048CD3A11DFBCDF2005EE060 /* UIBarButtonItem-Extension.swift in Sources */,
 				049C3FC71E31B00F000B2B8E /* UserConfig.swift in Sources */,
+				049C3FCD1E31B69D000B2B8E /* ResuableCell.swift in Sources */,
 				049E3AD51E13E7A1004146C7 /* JQPageControlView.swift in Sources */,
 				04CDBFF31DFB890000E427E1 /* BaseTabBarVC.swift in Sources */,
 				0450DC9A1E1F1F8F001C7976 /* Barista.swift in Sources */,

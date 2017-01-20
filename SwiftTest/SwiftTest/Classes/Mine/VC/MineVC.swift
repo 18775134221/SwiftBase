@@ -33,3 +33,14 @@ class MineVC: BaseVC {
     // MARK: - 柯里化（Currying）
 
 }
+
+extension MineVC: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 20;
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: ResuableCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
+        return cell
+    }
+}
