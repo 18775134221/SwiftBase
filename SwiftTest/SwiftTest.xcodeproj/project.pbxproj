@@ -10,6 +10,7 @@
 		040050F81E13477700D1A384 /* UIImage-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040050F71E13477700D1A384 /* UIImage-Extension.swift */; };
 		040050FD1E135C5000D1A384 /* JQCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040050FC1E135C5000D1A384 /* JQCarouselView.swift */; };
 		040050FF1E135C9700D1A384 /* JQCarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040050FE1E135C9700D1A384 /* JQCarouselCell.swift */; };
+		0403E4AE1E32EC4000E21651 /* UICollectionView-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0403E4AD1E32EC4000E21651 /* UICollectionView-Extension.swift */; };
 		043ECE8E1E2F189C00A6DCBE /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 043ECE8D1E2F189C00A6DCBE /* Alamofire.framework */; };
 		044273781DED2AF600429A5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044273771DED2AF600429A5A /* AppDelegate.swift */; };
 		0442737F1DED2AF600429A5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0442737E1DED2AF600429A5A /* Assets.xcassets */; };
@@ -92,6 +93,7 @@
 		040050F71E13477700D1A384 /* UIImage-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage-Extension.swift"; sourceTree = "<group>"; };
 		040050FC1E135C5000D1A384 /* JQCarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JQCarouselView.swift; sourceTree = "<group>"; };
 		040050FE1E135C9700D1A384 /* JQCarouselCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JQCarouselCell.swift; sourceTree = "<group>"; };
+		0403E4AD1E32EC4000E21651 /* UICollectionView-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView-Extension.swift"; sourceTree = "<group>"; };
 		043ECE8B1E2F182400A6DCBE /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/SwiftTest-bcexompyxttvkxeowzqdmerttkwu/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		043ECE8D1E2F189C00A6DCBE /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		044273741DED2AF600429A5A /* SwiftTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -543,6 +545,7 @@
 				049421201E1B58A30020EACF /* UIApplication-Extension.swift */,
 				049421221E1B58E30020EACF /* FileManager-Extension.swift */,
 				049C3FC81E31B5F7000B2B8E /* UITableView-Extension.swift */,
+				0403E4AD1E32EC4000E21651 /* UICollectionView-Extension.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -822,6 +825,7 @@
 				0463EB471E17ADCC00CC255A /* CoreDataTool.swift in Sources */,
 				040050FD1E135C5000D1A384 /* JQCarouselView.swift in Sources */,
 				04878BBB1E0142AA0019B271 /* JQPhoneManagerVC.swift in Sources */,
+				0403E4AE1E32EC4000E21651 /* UICollectionView-Extension.swift in Sources */,
 				04B882171E021F88000BAA0B /* UITextView-Extension.swift in Sources */,
 				04DB75D41E128D8D009166BA /* NSObject-Extension.swift in Sources */,
 				048CD3A21DFBCDF2005EE060 /* UIColor-Extension.swift in Sources */,

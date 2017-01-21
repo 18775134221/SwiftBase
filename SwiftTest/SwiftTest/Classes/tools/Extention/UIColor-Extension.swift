@@ -4,6 +4,8 @@ import UIKit
 
 extension UIColor {
     
+    // 如果需要高频率使用一个实例对象，可以使用拓展
+    static let myOwnColor = UIColor(red: 23_3.0/255, green: 23_4.0/255, blue: 23_5.0/255, alpha: 1)
     // 便利构造器
     convenience init(r : CGFloat, g : CGFloat, b : CGFloat) {
         self.init(red: r / 255.0, green: g / 255.0, blue: b / 255.0, alpha: 1.0)
