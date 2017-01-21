@@ -10,8 +10,8 @@ import UIKit
 
 protocol ViewNameReusable:class { }
 
-extension ViewNameReusable where Self:UIView {
-    static var reuseIdentifier:String {
+extension ViewNameReusable where Self: UIView {
+    static var reuseIdentifier: String {
         return String(describing: self)
     }
 }
