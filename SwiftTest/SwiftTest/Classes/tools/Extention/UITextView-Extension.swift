@@ -19,18 +19,19 @@ extension UITextView {
      * fontSize 提示语的字体大小
      */
     convenience init(frame: CGRect, placeHolderText: String? = "", placeColor: UIColor? = UIColor.lightGray, fontSize: CGFloat? = 15.0) {
-        let textView = UITextView()
-        textView.frame = frame
-        
-        let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: fontSize!)
-        label.text = placeHolderText
-        label.numberOfLines = 0
-        label.sizeToFit()
-        label.textColor = placeColor
-        
-        textView.addSubview(label)
-        textView.setValue(label, forKey: "_placeholderLabel")
+        let textView = UITextView().then {
+            $0.frame = frame
+        }
+        let _ = UILabel().then {
+            $0.font = UIFont.systemFont(ofSize: fontSize!)
+            $0.text = placeHolderText
+            $0.numberOfLines = 0
+            $0.sizeToFit()
+            $0.textColor = placeColor
+            textView.addSubview($0)
+            textView.setValue($0, forKey: "_placeholderLabel")
+        }
+
         self.init(frame:frame)
     }
 }
