@@ -9,6 +9,12 @@
 import UIKit
 import WebKit
 
+// MARK: - 优雅的管理selector
+fileprivate struct Action {
+    static let redViewGes = #selector(HomeVC.viewClick(tapGes:))
+    static let btnClick = #selector(HomeVC.btnClick(btn:))
+}
+
 class HomeVC: BaseVC {
 
     override func viewDidLoad() {
@@ -27,8 +33,16 @@ class HomeVC: BaseVC {
 
     }
     
-    private func setupUI() {
+    fileprivate func setupUI() {
         
+    }
+    
+    func viewClick(tapGes: UITapGestureRecognizer) {
+    
+    }
+    
+    func btnClick(btn: UIButton) {
+    
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
