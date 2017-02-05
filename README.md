@@ -2,7 +2,7 @@
 ===================================================
 
 # 介绍
-    - 1.使用UITabBarController + 4NavigationViewControll的方式
+    - 1.基本框架：使用UITabBarController + 4NavigationViewControll的方式
     - 2.自定义UITabBar ,按钮凸出的部分可以使用hitTest增加额外的点击事件
     - 3.新闻查看器
     - 4.then协议
@@ -17,6 +17,7 @@
     - 13.缓存清理工具（待解决）
     - 14.许多的分类工具
     - 15.WKWebView的使用
+    - 16.面向协议编程
     
 ## 一、161210 完成主框架的搭建
 
