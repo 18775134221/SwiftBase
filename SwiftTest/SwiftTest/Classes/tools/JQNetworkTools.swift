@@ -34,7 +34,6 @@ class JQNetworkTools {
         config.timeoutIntervalForRequest = 30
         //根据config创建manager
         let tempManger = SessionManager(configuration: config)
-        
         return tempManger
     }()
     
@@ -68,56 +67,56 @@ class JQNetworkTools {
         
         // 2.自定义头部
         let headers: HTTPHeaders = [
-            "Accept": "application/json",
+            "Accept": "application/json,text/plain",
             "X-Requested-With": "GFBiOS",
             "f": "2",
             "appv": "3.5"
         ]
         
-        manger.delegate.sessionDidReceiveChallenge = { session, challenge in
-            //认证服务器证书
-            if challenge.protectionSpace.authenticationMethod
-                == NSURLAuthenticationMethodServerTrust {
-                print("服务端证书认证！")
-                let serverTrust:SecTrust = challenge.protectionSpace.serverTrust!
-                let certificate = SecTrustGetCertificateAtIndex(serverTrust, 0)!
-                let remoteCertificateData
-                    = CFBridgingRetain(SecCertificateCopyData(certificate))!
-                let cerPath = Bundle.main.path(forResource: "tomcat", ofType: "cer")!
-                let cerUrl = URL(fileURLWithPath:cerPath)
-                let localCertificateData = try! Data(contentsOf: cerUrl)
-                
-                if (remoteCertificateData.isEqual(localCertificateData) == true) {
-                    
-                    let credential = URLCredential(trust: serverTrust)
-                    challenge.sender?.use(credential, for: challenge)
-                    return (URLSession.AuthChallengeDisposition.useCredential,
-                            URLCredential(trust: challenge.protectionSpace.serverTrust!))
-                    
-                } else {
-                    return (.cancelAuthenticationChallenge, nil)
-                }
-            }
-                //认证客户端证书
-            else if challenge.protectionSpace.authenticationMethod
-                == NSURLAuthenticationMethodClientCertificate {
-                print("客户端证书认证！")
-                //获取客户端证书相关信息
-                let identityAndTrust: IdentityAndTrust! = self.extractIdentity()
-                
-                let urlCredential:URLCredential = URLCredential(
-                    identity: identityAndTrust.identityRef,
-                    certificates: identityAndTrust.certArray as? [AnyObject],
-                    persistence: URLCredential.Persistence.forSession);
-                
-                return (.useCredential, urlCredential);
-            }
-                // 其它情况（不接受认证）
-            else {
-                print("其它情况（不接受认证）")
-                return (.cancelAuthenticationChallenge, nil)
-            }
-        }
+//        manger.delegate.sessionDidReceiveChallenge = { session, challenge in
+//            //认证服务器证书
+//            if challenge.protectionSpace.authenticationMethod
+//                == NSURLAuthenticationMethodServerTrust {
+//                print("服务端证书认证！")
+//                let serverTrust:SecTrust = challenge.protectionSpace.serverTrust!
+//                let certificate = SecTrustGetCertificateAtIndex(serverTrust, 0)!
+//                let remoteCertificateData
+//                    = CFBridgingRetain(SecCertificateCopyData(certificate))!
+//                let cerPath = Bundle.main.path(forResource: "tomcat", ofType: "cer")!
+//                let cerUrl = URL(fileURLWithPath:cerPath)
+//                let localCertificateData = try! Data(contentsOf: cerUrl)
+//                
+//                if (remoteCertificateData.isEqual(localCertificateData) == true) {
+//                    
+//                    let credential = URLCredential(trust: serverTrust)
+//                    challenge.sender?.use(credential, for: challenge)
+//                    return (URLSession.AuthChallengeDisposition.useCredential,
+//                            URLCredential(trust: challenge.protectionSpace.serverTrust!))
+//                    
+//                } else {
+//                    return (.cancelAuthenticationChallenge, nil)
+//                }
+//            }
+//                //认证客户端证书
+//            else if challenge.protectionSpace.authenticationMethod
+//                == NSURLAuthenticationMethodClientCertificate {
+//                print("客户端证书认证！")
+//                //获取客户端证书相关信息
+//                let identityAndTrust: IdentityAndTrust! = self.extractIdentity()
+//                
+//                let urlCredential:URLCredential = URLCredential(
+//                    identity: identityAndTrust.identityRef,
+//                    certificates: identityAndTrust.certArray as? [AnyObject],
+//                    persistence: URLCredential.Persistence.forSession);
+//                
+//                return (.useCredential, urlCredential);
+//            }
+//                // 其它情况（不接受认证）
+//            else {
+//                print("其它情况（不接受认证）")
+//                return (.cancelAuthenticationChallenge, nil)
+//            }
+//        }
 
         // 3.发起网络请求
         let tempBaseUrlStr = baseServiceUrl.appending(methodName!)
@@ -126,6 +125,16 @@ class JQNetworkTools {
                 print("Progress: \(progress.fractionCompleted)")
             }
             .validate { request, response, data in
+                // 获取响应头
+                // warning: - 没有走这个方法
+                let response: HTTPURLResponse = response;
+                let allHeaders: Dictionary = response.allHeaderFields;
+                print("tttttttt----\(allHeaders["t"] ?? "")")
+                if allHeaders["t"] != nil {
+                    print("tttttttt----\(allHeaders["t"] ?? "")")
+                    // 设置请求头
+                    
+                }
                 return .success
             }
             .responseJSON { response in
@@ -148,8 +157,16 @@ class JQNetworkTools {
             "Accept": "application/json",
             "X-Requested-With": "GFBiOS",
             "f": "2",
-            "appv": "3.5"
+            "appv": "3.5",
+            "Set-Cookie" : ""
         ]
+        
+//        upLoadManger.upload(multipartFormData: { (multipartFormData) in
+//            
+//        },to: postUrlStr,headers: headers, encodingCompletion: { response in
+//            // 获取响应头
+//        
+//        })
         
         upLoadManger.upload( multipartFormData: { multipartFormData in
             // 图片数据绑定

@@ -31,7 +31,7 @@ class TypesVC: BaseVC {
     
     private func requestData() {
         var dict: Dictionary<String,Any> = Dictionary<String,Any>()
-        dict["id"] = "100"
+        dict["id"] = "1"
 //        NetworkTools.requestData(type: .get, params: dict) { (result) in
 //            print(result);
 //            //let test = Mapper<TypeMD>().map(JSONString: result as! String)
@@ -40,7 +40,12 @@ class TypesVC: BaseVC {
 //            print(test1?.data?.cate?.first?.name ?? "")
 //        }
         
-        JQNetworkTools.sharedInstance.requestData(methodName: "/cate/picList", type: .get, params: dict, finishCallback: {(result) in
+        JQNetworkTools.sharedInstance.requestData(methodName: "/cate/picList", type: .get, params: nil, finishCallback: {(result) in
+            let test1 = Mapper<TypeMD>().map(JSONObject: result)
+            print(test1?.data?.cate?.first?.name ?? "")
+        })
+        
+        JQNetworkTools.sharedInstance.requestData(methodName: "/cate/picList", type: .get, params: nil, finishCallback: {(result) in
             let test1 = Mapper<TypeMD>().map(JSONObject: result)
             print(test1?.data?.cate?.first?.name ?? "")
         })
