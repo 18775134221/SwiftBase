@@ -32,19 +32,30 @@ class TypesVC: BaseVC {
     private func requestData() {
         var dict: Dictionary<String,Any> = Dictionary<String,Any>()
         dict["id"] = "100"
-        NetworkTools.requestData(type: .get, params: dict) { (result) in
-            print(result);
-            //let test = Mapper<TypeMD>().map(JSONString: result as! String)
+//        NetworkTools.requestData(type: .get, params: dict) { (result) in
+//            print(result);
+//            //let test = Mapper<TypeMD>().map(JSONString: result as! String)
+//            let test1 = Mapper<TypeMD>().map(JSONObject: result)
+//            //print(test?.data?.cate?.first?.name ??  "")
+//            print(test1?.data?.cate?.first?.name ?? "")
+//        }
+        
+        JQNetworkTools.sharedInstance.requestData(methodName: "/cate/picList", type: .get, params: dict, finishCallback: {(result) in
             let test1 = Mapper<TypeMD>().map(JSONObject: result)
-            //print(test?.data?.cate?.first?.name ??  "")
             print(test1?.data?.cate?.first?.name ?? "")
-        }
+        })
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        JQPhoneManagerVC.call(nil, self, failBlock: {
-            print("拨打失败")
+        var dict: Dictionary<String,Any> = Dictionary<String,Any>()
+        dict["id"] = "100"
+        dict["headPic"] = UIImage(named: "1")
+        JQNetworkTools.sharedInstance.upLoadFileData(methodName: "/user/updateInfo", params: dict, finishCallback: {(reult) in
+        
         })
+//        JQPhoneManagerVC.call(nil, self, failBlock: {
+//            print("拨打失败")
+//        })
     }
 
 }
