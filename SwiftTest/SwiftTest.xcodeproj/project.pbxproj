@@ -65,6 +65,7 @@
 		04CDBFFB1DFB8AD500E427E1 /* TypesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CDBFFA1DFB8AD500E427E1 /* TypesVC.swift */; };
 		04CDBFFD1DFB8AF600E427E1 /* ShoppingCartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CDBFFC1DFB8AF600E427E1 /* ShoppingCartVC.swift */; };
 		04CDBFFF1DFB8B2500E427E1 /* MineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CDBFFE1DFB8B2500E427E1 /* MineVC.swift */; };
+		04D799371E4C05FB00230E0D /* TypeMD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D799361E4C05FB00230E0D /* TypeMD.swift */; };
 		04DB75CE1E120D46009166BA /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB75CD1E120D46009166BA /* LoginAPI.swift */; };
 		04DB75D01E120FDA009166BA /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB75CF1E120FDA009166BA /* LoginViewModel.swift */; };
 		04DB75D21E127952009166BA /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB75D11E127951009166BA /* StartView.swift */; };
@@ -157,6 +158,7 @@
 		04CDBFFA1DFB8AD500E427E1 /* TypesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypesVC.swift; sourceTree = "<group>"; };
 		04CDBFFC1DFB8AF600E427E1 /* ShoppingCartVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingCartVC.swift; sourceTree = "<group>"; };
 		04CDBFFE1DFB8B2500E427E1 /* MineVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineVC.swift; sourceTree = "<group>"; };
+		04D799361E4C05FB00230E0D /* TypeMD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeMD.swift; sourceTree = "<group>"; };
 		04DB75CD1E120D46009166BA /* LoginAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginAPI.swift; sourceTree = "<group>"; };
 		04DB75CF1E120FDA009166BA /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		04DB75D11E127951009166BA /* StartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
@@ -466,6 +468,7 @@
 		04CDBFE61DFB875A00E427E1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				04D799361E4C05FB00230E0D /* TypeMD.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -805,6 +808,7 @@
 				04DB75D21E127952009166BA /* StartView.swift in Sources */,
 				049C3FCB1E31B63F000B2B8E /* ResuableProtocol.swift in Sources */,
 				04C09EEE1E11404D00EE2491 /* Const.swift in Sources */,
+				04D799371E4C05FB00230E0D /* TypeMD.swift in Sources */,
 				04CDBFF11DFB889700E427E1 /* BaseNavigationVC.swift in Sources */,
 				04B8821C1E027B42000BAA0B /* ToastView.swift in Sources */,
 				048CD39C1DFBCD93005EE060 /* PageTitleView.swift in Sources */,

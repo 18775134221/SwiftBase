@@ -3,6 +3,7 @@ PODS:
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
   - Kingfisher (3.2.0)
+  - ObjectMapper (2.2.1)
   - Realm (2.0.3):
     - Realm/Headers (= 2.0.3)
   - Realm/Headers (2.0.3)
@@ -16,6 +17,7 @@ PODS:
 DEPENDENCIES:
   - FMDB (~> 2.6.2)
   - Kingfisher (~> 3.2.0)
+  - ObjectMapper (~> 2.2.1)
   - RealmSwift (~> 2.0.3)
   - RxCocoa (~> 3.0.1)
   - RxSwift (~> 3.0.1)
@@ -24,12 +26,13 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   Kingfisher: 50407d1d5dbc34965009d425a286342ff36a84ea
+  ObjectMapper: 41e43e1a89f8060ef5ea5d04ba852e269a621d68
   Realm: 5f008bfe3c8c47142eddfc30b8c1584cde22db24
   RealmSwift: 5afb451f65b682242f272dbb52d5c6f6e343c980
   RxCocoa: 15a52fc590dcc700cb4a690a633b5c5184ce3a78
   RxSwift: af5680055c4ad04480189c52d28385b1029493a6
   SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
 
-PODFILE CHECKSUM: c3e6fa99c3fa805a8b84348a79b91c7cb12812a2
+PODFILE CHECKSUM: df87fff4922f133b7e119155b67d4d058be927da
 
 COCOAPODS: 1.1.1

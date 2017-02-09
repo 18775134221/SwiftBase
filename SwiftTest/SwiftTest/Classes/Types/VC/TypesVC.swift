@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ObjectMapper
 
 class TypesVC: BaseVC {
 
@@ -21,10 +22,23 @@ class TypesVC: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        requestData()
     }
 
     private func setupUI() {
         view.addSubview(label_AnyO)
+    }
+    
+    private func requestData() {
+        var dict: Dictionary<String,Any> = Dictionary<String,Any>()
+        dict["id"] = "100"
+        NetworkTools.requestData(type: .get, params: dict) { (result) in
+            print(result);
+            //let test = Mapper<TypeMD>().map(JSONString: result as! String)
+            let test1 = Mapper<TypeMD>().map(JSONObject: result)
+            //print(test?.data?.cate?.first?.name ??  "")
+            print(test1?.data?.cate?.first?.name ?? "")
+        }
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
