@@ -65,5 +65,24 @@ extension String{
     func stringByAddingPercentEncoding() -> String {
         return self.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
     }
+    
+    // MARK: - 通过正则表达式查找相应字符串在内容字符串的位置
+    // 构建正则表达式
+    func logResult(with regexRule: String, contentStr: NSString, resultsBlock:( (_location: Int, _length: Int)) -> ()) {
+        let regex = try! NSRegularExpression(pattern: regexRule, options: .caseInsensitive)
+        let results = regex.matches(in: contentStr as String, options: .withoutAnchoringBounds, range: NSMakeRange(0, contentStr.length))
+        for matchResult in results {
+            let matchStr = contentStr.substring(with: matchResult.range)
+            print("result: \(matchStr), rang:(\(matchResult.range.location),\(matchResult.range.length))")
+            resultsBlock((_location: matchResult.range.location,_length: matchResult.range.length))
+        }
+        /* 使用方式
+        let contentStr = "how are you!"
+        let regexEngRule = "o"
+        contentStr.logResult(with: regexEngRule, contentStr: contentStr as NSString, resultsBlock: {(_location,_length) in
+            print(NSMakeRange(_location, _length))
+        })
+        */
+    }
 
 }

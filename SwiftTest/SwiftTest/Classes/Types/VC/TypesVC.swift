@@ -50,17 +50,33 @@ class TypesVC: BaseVC {
             print(test1?.data?.cate?.first?.name ?? "")
         })
     }
-
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    
+    func testPort() {
         var dict: Dictionary<String,Any> = Dictionary<String,Any>()
         dict["id"] = "100"
         dict["headPic"] = UIImage(named: "1")
         JQNetworkTools.sharedInstance.upLoadFileData(methodName: "/user/updateInfo", params: dict, finishCallback: {(reult) in
-        
+            
         })
-//        JQPhoneManagerVC.call(nil, self, failBlock: {
-//            print("拨打失败")
-//        })
+        //        JQPhoneManagerVC.call(nil, self, failBlock: {
+        //            print("拨打失败")
+        //        })
+    }
+    
+    func testRegex() {
+        let contentStr = "how are you!"
+        let regexEngRule = "o"
+        contentStr.logResult(with: regexEngRule, contentStr: contentStr as NSString, resultsBlock: {(_location,_length) in
+            print(NSMakeRange(_location, _length))
+        })
+    }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let contentStr = "how are you!"
+        let regexEngRule = "o"
+        contentStr.logResult(with: regexEngRule, contentStr: contentStr as NSString, resultsBlock: {(_location,_length) in
+                print(NSMakeRange(_location, _length))
+            })
     }
 
 }
