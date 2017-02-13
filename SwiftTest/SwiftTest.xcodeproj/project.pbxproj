@@ -26,6 +26,7 @@
 		0463EB441E179D7800CC255A /* UserMD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0463EB431E179D7800CC255A /* UserMD.swift */; };
 		0463EB471E17ADCC00CC255A /* CoreDataTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0463EB461E17ADCC00CC255A /* CoreDataTool.swift */; };
 		046EA4391E036C8200FDCAE6 /* JQAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EA4381E036C8200FDCAE6 /* JQAlertVC.swift */; };
+		04745ED61E51864E004D5EE1 /* UserDefault-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04745ED51E51864E004D5EE1 /* UserDefault-Extension.swift */; };
 		04878BBB1E0142AA0019B271 /* JQPhoneManagerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04878BBA1E0142AA0019B271 /* JQPhoneManagerVC.swift */; };
 		048CD3701DFBA83C005EE060 /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048CD36F1DFBA83C005EE060 /* NetworkTools.swift */; };
 		048CD39B1DFBCD93005EE060 /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048CD3991DFBCD93005EE060 /* PageContentView.swift */; };
@@ -119,6 +120,7 @@
 		0463EB431E179D7800CC255A /* UserMD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMD.swift; sourceTree = "<group>"; };
 		0463EB461E17ADCC00CC255A /* CoreDataTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataTool.swift; sourceTree = "<group>"; };
 		046EA4381E036C8200FDCAE6 /* JQAlertVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JQAlertVC.swift; sourceTree = "<group>"; };
+		04745ED51E51864E004D5EE1 /* UserDefault-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefault-Extension.swift"; sourceTree = "<group>"; };
 		04878BBA1E0142AA0019B271 /* JQPhoneManagerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JQPhoneManagerVC.swift; sourceTree = "<group>"; };
 		048CD36F1DFBA83C005EE060 /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
 		048CD3991DFBCD93005EE060 /* PageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
@@ -552,6 +554,7 @@
 				049421221E1B58E30020EACF /* FileManager-Extension.swift */,
 				049C3FC81E31B5F7000B2B8E /* UITableView-Extension.swift */,
 				0403E4AD1E32EC4000E21651 /* UICollectionView-Extension.swift */,
+				04745ED51E51864E004D5EE1 /* UserDefault-Extension.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -826,6 +829,7 @@
 				040050F81E13477700D1A384 /* UIImage-Extension.swift in Sources */,
 				04CDBFFF1DFB8B2500E427E1 /* MineVC.swift in Sources */,
 				04DB75D01E120FDA009166BA /* LoginViewModel.swift in Sources */,
+				04745ED61E51864E004D5EE1 /* UserDefault-Extension.swift in Sources */,
 				0463EB401E1789CC00CC255A /* String-Extension.swift in Sources */,
 				04CDBFF91DFB8AAC00E427E1 /* HomeVC.swift in Sources */,
 				0463EB441E179D7800CC255A /* UserMD.swift in Sources */,
