@@ -54,7 +54,7 @@ class BaseTabBar: UITabBar {
     
     // 重写hitTest方法，去监听发布按钮的点击，目的是为了让凸出的部分点击也有反应
     override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
-        if false == self.isHidden {
+        if !self.isHidden {
             let nPoint: CGPoint = convert(point, to: pBtn)
             if pBtn.point(inside: nPoint, with: event) {
                 return pBtn
