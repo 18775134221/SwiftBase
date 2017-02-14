@@ -22,15 +22,14 @@ class HomeVC: BaseVC {
   
         openUrl()
         
-        NSObject.getFileSize(path: NSObject.cachesPath(), completionBlock: { (size) in
+        NSObject.getFileSizeWithFileName(path: NSObject.cachesPath(), completionBlock: {size in
             print("当前文件大小\(CGFloat(size) / 1024 / 1024)")
         })
         
-        NSObject.removeCaches {
+        NSObject.removeCachesWithCompletion { 
             
         }
-
-
+        
     }
     
     fileprivate func setupUI() {
