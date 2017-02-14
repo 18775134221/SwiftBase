@@ -18,6 +18,7 @@ class PageTitleView: UIView {
     // MARK:- 定义属性
     fileprivate var currentIndex : Int = 0
     fileprivate var titles : [String]
+    fileprivate var margin : CGFloat = 0
     weak var delegate : PageTitleViewDelegate?
     
     // MARK:- 懒加载属性
@@ -29,6 +30,7 @@ class PageTitleView: UIView {
         scrollView.bounces = false
         return scrollView
     }()
+    
     fileprivate lazy var scrollLine : UIView = {
         let scrollLine = UIView()
         scrollLine.backgroundColor = UIColor.orange
@@ -175,4 +177,63 @@ extension PageTitleView {
         // 4.记录最新的index
         currentIndex = targetIndex
     }
+}
+
+//对外暴露一个接口, 和外界交互(类似优酷允许跳跃的动画)
+extension PageTitleView {
+    
+    func setTitleChangeWithProgress(progress: CGFloat, beforeTitleIndex: Int, targetTitleIndex: Int) -> () {
+        
+        let beforeTitle = titleLabels[beforeTitleIndex]
+        let targetTitle = titleLabels[targetTitleIndex]
+        
+        let templabel = UILabel(frame: CGRect(x: 0, y: 0, width: 1000, height: 1000))
+        templabel.text = beforeTitle.text;
+        templabel.sizeToFit()
+        
+        let moveX = (targetTitle.frame.origin.x - beforeTitle.frame.origin.x) * progress
+        
+        let isLimit : Bool = moveX == targetTitle.frame.origin.x - beforeTitle.frame.origin.x
+        
+        if !isLimit {
+            
+            if moveX > 0  {
+                
+                scrollLine.frame.size.width = templabel.frame.size.width + (templabel.frame.size.width + self.margin * 2) * progress * 2
+                //判定下划线是否跳跃
+                if progress < 0.5 {
+                    
+                    scrollLine.frame.size.width = templabel.frame.size.width + (templabel.frame.size.width + self.margin * 2) * progress * 2
+                    scrollLine.frame.origin.x = beforeTitle.frame.origin.x + margin
+                }else{
+                    scrollLine.frame.size.width = templabel.frame.size.width + (templabel.frame.size.width + self.margin * 2) - (templabel.frame.size.width + self.margin * 2) * (progress * 2 - 1)
+                    scrollLine.frame.origin.x = beforeTitle.frame.origin.x + margin + (templabel.frame.size.width + self.margin * 2) * (progress * 2 - 1)
+                }
+                
+            }else{
+                
+                if progress < 0.5 {
+                    
+                    scrollLine.frame.size.width = templabel.frame.size.width + (templabel.frame.size.width + self.margin * 2) * progress * 2
+                    scrollLine.frame.origin.x = targetTitle.frame.origin.x + margin - (templabel.frame.size.width + self.margin * 2) * (progress * 2 - 1)
+                    
+                }else{
+                    
+                    scrollLine.frame.size.width = templabel.frame.size.width + (templabel.frame.size.width + self.margin * 2) - (templabel.frame.size.width + self.margin * 2) * (progress * 2 - 1)
+                    scrollLine.frame.origin.x = targetTitle.frame.origin.x + margin
+                }
+                
+                
+            }
+        }
+        
+        currentIndex = targetTitleIndex
+        
+        let colorRang = (kSelectColor.0 - kNormalColor.0, kSelectColor.1 - kNormalColor.1,kSelectColor.2 - kNormalColor.2);
+        
+        beforeTitle.textColor = UIColor(r: kSelectColor.0 - colorRang.0 * progress, g: kSelectColor.1 - colorRang.1 * progress, b: kSelectColor.2 - colorRang.2 * progress);
+        targetTitle.textColor = UIColor(r: kNormalColor.0 + colorRang.0 * progress, g: kNormalColor.1 + colorRang.1 * progress, b:  kNormalColor.2 + colorRang.2 * progress);
+        
+    }
+    
 }
