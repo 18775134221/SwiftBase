@@ -28,6 +28,9 @@
 		046EA4391E036C8200FDCAE6 /* JQAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EA4381E036C8200FDCAE6 /* JQAlertVC.swift */; };
 		04745ED61E51864E004D5EE1 /* UserDefault-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04745ED51E51864E004D5EE1 /* UserDefault-Extension.swift */; };
 		04878BBB1E0142AA0019B271 /* JQPhoneManagerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04878BBA1E0142AA0019B271 /* JQPhoneManagerVC.swift */; };
+		048838561E5409C00091CB9F /* PoperMenuMD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048838551E5409C00091CB9F /* PoperMenuMD.swift */; };
+		048838581E5427910091CB9F /* PoperMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048838571E5427910091CB9F /* PoperMenuCell.swift */; };
+		0488385A1E5427AD0091CB9F /* PoperMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048838591E5427AD0091CB9F /* PoperMenuView.swift */; };
 		048CD3701DFBA83C005EE060 /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048CD36F1DFBA83C005EE060 /* NetworkTools.swift */; };
 		048CD39B1DFBCD93005EE060 /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048CD3991DFBCD93005EE060 /* PageContentView.swift */; };
 		048CD39C1DFBCD93005EE060 /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048CD39A1DFBCD93005EE060 /* PageTitleView.swift */; };
@@ -122,6 +125,9 @@
 		046EA4381E036C8200FDCAE6 /* JQAlertVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JQAlertVC.swift; sourceTree = "<group>"; };
 		04745ED51E51864E004D5EE1 /* UserDefault-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefault-Extension.swift"; sourceTree = "<group>"; };
 		04878BBA1E0142AA0019B271 /* JQPhoneManagerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JQPhoneManagerVC.swift; sourceTree = "<group>"; };
+		048838551E5409C00091CB9F /* PoperMenuMD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoperMenuMD.swift; sourceTree = "<group>"; };
+		048838571E5427910091CB9F /* PoperMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoperMenuCell.swift; sourceTree = "<group>"; };
+		048838591E5427AD0091CB9F /* PoperMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoperMenuView.swift; sourceTree = "<group>"; };
 		048CD36F1DFBA83C005EE060 /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
 		048CD3991DFBCD93005EE060 /* PageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
 		048CD39A1DFBCD93005EE060 /* PageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
@@ -302,6 +308,16 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		048838541E54098F0091CB9F /* PoperMenu */ = {
+			isa = PBXGroup;
+			children = (
+				048838551E5409C00091CB9F /* PoperMenuMD.swift */,
+				048838571E5427910091CB9F /* PoperMenuCell.swift */,
+				048838591E5427AD0091CB9F /* PoperMenuView.swift */,
+			);
+			path = PoperMenu;
+			sourceTree = "<group>";
+		};
 		049C3FC31E31AD62000B2B8E /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
@@ -426,6 +442,7 @@
 		04CDBFE11DFB873C00E427E1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				048838541E54098F0091CB9F /* PoperMenu */,
 				040050FB1E135BFE00D1A384 /* Carousel */,
 				048CD3991DFBCD93005EE060 /* PageContentView.swift */,
 				048CD39A1DFBCD93005EE060 /* PageTitleView.swift */,
@@ -814,6 +831,7 @@
 				04DB75D21E127952009166BA /* StartView.swift in Sources */,
 				049C3FCB1E31B63F000B2B8E /* ResuableProtocol.swift in Sources */,
 				04C09EEE1E11404D00EE2491 /* Const.swift in Sources */,
+				0488385A1E5427AD0091CB9F /* PoperMenuView.swift in Sources */,
 				04D799371E4C05FB00230E0D /* TypeMD.swift in Sources */,
 				04CDBFF11DFB889700E427E1 /* BaseNavigationVC.swift in Sources */,
 				04B8821C1E027B42000BAA0B /* ToastView.swift in Sources */,
@@ -842,12 +860,14 @@
 				04DB75D41E128D8D009166BA /* NSObject-Extension.swift in Sources */,
 				048CD3A21DFBCDF2005EE060 /* UIColor-Extension.swift in Sources */,
 				048CD39B1DFBCD93005EE060 /* PageContentView.swift in Sources */,
+				048838561E5409C00091CB9F /* PoperMenuMD.swift in Sources */,
 				04CDBFFB1DFB8AD500E427E1 /* TypesVC.swift in Sources */,
 				049421211E1B58A30020EACF /* UIApplication-Extension.swift in Sources */,
 				04B8821E1E027B6E000BAA0B /* FileAnimationUtil.swift in Sources */,
 				048CD3A01DFBCDF2005EE060 /* NSDate-Extension.swift in Sources */,
 				049421191E1B55550020EACF /* RuntimeCategory-Extension.swift in Sources */,
 				0494211D1E1B580B0020EACF /* UIWindow-Extension.swift in Sources */,
+				048838581E5427910091CB9F /* PoperMenuCell.swift in Sources */,
 				04C2A8291E13B01E0076B58D /* Timer-Extension.swift in Sources */,
 				040050FF1E135C9700D1A384 /* JQCarouselCell.swift in Sources */,
 				04CDBFF71DFB895400E427E1 /* BaseTableVC.swift in Sources */,
