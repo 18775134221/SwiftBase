@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 
-
 protocol UserDefaultNameSpace {}
 
 extension UserDefaultNameSpace {

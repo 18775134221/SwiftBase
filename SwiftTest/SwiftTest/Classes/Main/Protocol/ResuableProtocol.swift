@@ -6,12 +6,12 @@
 //  Copyright © 2017年 MAC. All rights reserved.
 //
 
-import UIKit
-
-protocol ViewNameReusable:class { }
-
-extension ViewNameReusable where Self: UIView {
-    static var reuseIdentifier: String {
-        return String(describing: self)
-    }
-}
+//import UIKit
+//
+//protocol ViewNameReusable:class { }
+//
+//extension ViewNameReusable where Self: UIView {
+//    static var reuseIdentifier: String {
+//        return String(describing: self)
+//    }
+//}

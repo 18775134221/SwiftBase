@@ -28,4 +28,11 @@ extension UIView {
             return objc_getAssociatedObject(self, RuntimeKey.jkKey) as? String
         }
     }
+    
+    func text() {
+      self.jkPro = ""
+     debugLog(self.jkPro)
+    }
+    
 }
+

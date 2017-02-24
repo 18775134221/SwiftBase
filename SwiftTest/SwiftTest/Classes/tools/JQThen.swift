@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 public protocol Then {}
 
@@ -28,6 +29,7 @@ extension Then where Self: Any {
      view.addSubview(label)
      }
      */
+    
 }
 
 
@@ -46,7 +48,21 @@ extension Then where Self: AnyObject {
      view.addSubview(label)
      }
      */
+    
+    /*
+     // 2.1 (推荐)无参数，无需命名，用$取参数，可自动联想属性
+     let lable = UILabel().then {
+     $0.backgroundColor = .blue
+     $0.font = UIFont.systemFont(ofSize: 18)
+     $0.textAlignment = .center
+     $0.text = "Then库写法_2.1"
+     $0.frame = CGRect.init(x: 200, y: 260, width: 150, height: 40)
+     view.addSubview($0)
+     }
+     
+     lable.backgroundColor = UIColor.red
+     */
 }
 
 
-extension NSObject: Then {}
+extension UIView: Then {}

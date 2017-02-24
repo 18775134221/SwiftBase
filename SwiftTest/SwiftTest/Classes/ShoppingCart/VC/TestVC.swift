@@ -47,6 +47,13 @@ class TestVC: BaseVC {
         
         lable.backgroundColor = UIColor.red
         
+        _ = UILabel().then {
+            $0.numberOfLines = 0;
+            $0.textColor = .red
+            $0.text = "测试"
+            view.addSubview($0)
+        }
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
