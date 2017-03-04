@@ -8,6 +8,7 @@
 
 import UIKit
 import ObjectMapper
+import SwiftyJSON
 
 class TypesVC: BaseVC {
 
@@ -40,14 +41,16 @@ class TypesVC: BaseVC {
 //            print(test1?.data?.cate?.first?.name ?? "")
 //        }
         
-        JQNetworkTools.sharedInstance.requestData(methodName: "/cate/picList", type: .get, params: nil, finishCallback: {(result) in
-            let test1 = Mapper<TypeMD>().map(JSONObject: result)
-            print(test1?.data?.cate?.first?.name ?? "")
-        })
+//        JQNetworkTools.sharedInstance.requestData(methodName: "/cate/picList", type: .get, params: nil, finishCallback: {(result) in
+//            let test1 = Mapper<TypeMD>().map(JSONObject: result)
+//            print(test1?.data?.cate.first?.name ?? "")
+//        })
         
         JQNetworkTools.sharedInstance.requestData(methodName: "/cate/picList", type: .get, params: nil, finishCallback: {(result) in
-            let test1 = Mapper<TypeMD>().map(JSONObject: result)
-            print(test1?.data?.cate?.first?.name ?? "")
+//            let test1 = Mapper<TypeMD>().map(JSONObject: result)
+//            print(test1?.data?.cate.first?.name ?? "")
+            let json = JSON(result)
+            print(json["ret"])
         })
     }
     

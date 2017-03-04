@@ -15,6 +15,12 @@ fileprivate struct Action {
     
 }
 
+extension Selector {
+    static let toMenu = #selector(ShoppingCartVC.viewClick(button:))
+    static let toExtra = #selector(ShoppingCartVC.leftViewClick(button:))
+}
+
+
 class ShoppingCartVC: BaseVC {
 
     override func viewDidLoad() {
@@ -50,6 +56,8 @@ class ShoppingCartVC: BaseVC {
         button.backgroundColor = .red
         button.addTarget(self, action: Action.rightItemAction, for: .touchUpInside)
         let rightItem = UIBarButtonItem(customView: button)
+        rightItem.target = self
+        rightItem.action = Selector.toMenu
         self.navigationItem.setRightBarButton(rightItem, animated: true)
         
         // 左边的按钮

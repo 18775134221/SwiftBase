@@ -15,7 +15,7 @@ class TypeMD: Mappable {
 
     var data: TypeData?
 
-    var msg: String?
+    var msg: String = ""
     
     required init?(map: Map){
         
@@ -28,11 +28,12 @@ class TypeMD: Mappable {
     }
     
 }
+
 class TypeData: Mappable {
 
-    var pic: [TypePic]?
+    var pic: [TypePic] = [TypePic]()
 
-    var cate: [TypeCate]?
+    var cate: [TypeCate] = [TypeCate]()
     
     required init?(map: Map){
         
@@ -47,19 +48,19 @@ class TypeData: Mappable {
 
 class TypePic: Mappable {
 
-    var picUrl: String?
+    var picUrl: String = ""
 
     var prodId: Int = 0
 
-    var text1: String?
+    var text1: String = ""
 
     var price: Int = 0
 
-    var text2: String?
+    var text2: String = ""
 
     var storeId: Int = 0
 
-    var link: String?
+    var link: String = ""
 
     var type: Int = 0
     
@@ -75,17 +76,17 @@ class TypePic: Mappable {
 
 class TypeCate: Mappable {
 
-    var picUrl: String?
+    var picUrl: String = ""
 
     var id: Int = 0
 
-    var subList: [TypeSublist]?
+    var subList: [TypeSublist] = [TypeSublist]()
 
     var grade: Int = 0
 
-    var name: String?
+    var name: String = ""
 
-    var parId: String?
+    var parId: String = ""
     
     required init?(map: Map){
         
@@ -105,9 +106,9 @@ class TypeSublist: Mappable {
 
     var grade: Int = 0
 
-    var name: String?
+    var name: String = ""
 
-    var picUrl: String?
+    var picUrl: String = ""
     
     required init?(map: Map){
         
