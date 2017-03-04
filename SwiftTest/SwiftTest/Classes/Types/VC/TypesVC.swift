@@ -33,13 +33,13 @@ class TypesVC: BaseVC {
     private func requestData() {
         var dict: Dictionary<String,Any> = Dictionary<String,Any>()
         dict["id"] = "1"
-//        NetworkTools.requestData(type: .get, params: dict) { (result) in
-//            print(result);
-//            //let test = Mapper<TypeMD>().map(JSONString: result as! String)
-//            let test1 = Mapper<TypeMD>().map(JSONObject: result)
-//            //print(test?.data?.cate?.first?.name ??  "")
-//            print(test1?.data?.cate?.first?.name ?? "")
-//        }
+        NetworkTools.requestData(type: .get, params: dict) { (result) in
+            print(result);
+            //let test = Mapper<TypeMD>().map(JSONString: result as! String)
+            let test1 = Mapper<TypeMD>().map(JSONObject: result)
+            //print(test?.data?.cate?.first?.name ??  "")
+            print(test1?.data?.cate.first?.name ?? "")
+        }
         
 //        JQNetworkTools.sharedInstance.requestData(methodName: "/cate/picList", type: .get, params: nil, finishCallback: {(result) in
 //            let test1 = Mapper<TypeMD>().map(JSONObject: result)
@@ -49,8 +49,11 @@ class TypesVC: BaseVC {
         JQNetworkTools.sharedInstance.requestData(methodName: "/cate/picList", type: .get, params: nil, finishCallback: {(result) in
 //            let test1 = Mapper<TypeMD>().map(JSONObject: result)
 //            print(test1?.data?.cate.first?.name ?? "")
-            let json = JSON(result)
-            print(json["ret"])
+            //let json = JSON(result).dictionary
+           // guard let resultDict = json else { return }
+            let type: TypesSATMD = TypesSATMD(dict: (result as? [String : NSObject])!)
+            print(type.typesSATData?.pics.first?.picUrl ?? "")
+            //print(json["ret"])
         })
     }
     

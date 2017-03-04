@@ -50,6 +50,7 @@
 		049C3FCD1E31B69D000B2B8E /* ResuableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C3FCC1E31B69D000B2B8E /* ResuableCell.swift */; };
 		049E3AD31E13CEC4004146C7 /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E3AD21E13CEC4004146C7 /* TestVC.swift */; };
 		049E3AD51E13E7A1004146C7 /* JQPageControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E3AD41E13E7A1004146C7 /* JQPageControlView.swift */; };
+		04AE87601E6A4E0D00721A84 /* TypesSATMD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE875F1E6A4E0D00721A84 /* TypesSATMD.swift */; };
 		04B882171E021F88000BAA0B /* UITextView-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B882161E021F88000BAA0B /* UITextView-Extension.swift */; };
 		04B8821C1E027B42000BAA0B /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8821B1E027B42000BAA0B /* ToastView.swift */; };
 		04B8821E1E027B6E000BAA0B /* FileAnimationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8821D1E027B6E000BAA0B /* FileAnimationUtil.swift */; };
@@ -146,6 +147,7 @@
 		049C3FCC1E31B69D000B2B8E /* ResuableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResuableCell.swift; sourceTree = "<group>"; };
 		049E3AD21E13CEC4004146C7 /* TestVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
 		049E3AD41E13E7A1004146C7 /* JQPageControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JQPageControlView.swift; sourceTree = "<group>"; };
+		04AE875F1E6A4E0D00721A84 /* TypesSATMD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypesSATMD.swift; sourceTree = "<group>"; };
 		04B882161E021F88000BAA0B /* UITextView-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView-Extension.swift"; sourceTree = "<group>"; };
 		04B8821B1E027B42000BAA0B /* ToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		04B8821D1E027B6E000BAA0B /* FileAnimationUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileAnimationUtil.swift; sourceTree = "<group>"; };
@@ -489,6 +491,7 @@
 			isa = PBXGroup;
 			children = (
 				04D799361E4C05FB00230E0D /* TypeMD.swift */,
+				04AE875F1E6A4E0D00721A84 /* TypesSATMD.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -851,6 +854,7 @@
 				040050FD1E135C5000D1A384 /* JQCarouselView.swift in Sources */,
 				04878BBB1E0142AA0019B271 /* JQPhoneManagerVC.swift in Sources */,
 				0403E4AE1E32EC4000E21651 /* Cell-Extension.swift in Sources */,
+				04AE87601E6A4E0D00721A84 /* TypesSATMD.swift in Sources */,
 				04B882171E021F88000BAA0B /* UITextView-Extension.swift in Sources */,
 				04D799391E4C3DC900230E0D /* JQNetworkTools.swift in Sources */,
 				04DB75D41E128D8D009166BA /* NSObject-Extension.swift in Sources */,
