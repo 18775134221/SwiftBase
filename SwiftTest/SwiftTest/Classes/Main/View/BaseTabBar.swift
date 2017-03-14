@@ -20,10 +20,9 @@ class BaseTabBar: UITabBar {
         super.layoutSubviews()
         let count: Int = (items?.count)! + 1
         let btnW: CGFloat = UIScreen.main.bounds.size.width / CGFloat(count)
-        let btnH: CGFloat = 49.0;
+        let btnH: CGFloat = bounds.height;
         var i: Int = 0
-        
-        for (_,button) in self.subviews.enumerated() {
+        subviews.forEach({ (button) in
             if button.isKind(of: NSClassFromString("UITabBarButton")!) {
                 if 2 == i {
                     i += 1
@@ -37,18 +36,17 @@ class BaseTabBar: UITabBar {
             }else{
                 pBtn.center = CGPoint(x: frame.size.width * 0.5, y: 0)
             }
+        })
 
-        }
     }
     
     
-    fileprivate lazy var pBtn: UIButton = {[unowned self] in
-        
+    fileprivate lazy var pBtn: UIButton = {[weak self] in
         let btn: UIButton = UIButton(type:.custom)
         btn.bounds = CGRect(x: 0, y: 0, width: 50, height: 50)
         btn.backgroundColor = UIColor.red
         btn.sizeToFit()
-        self.addSubview(btn)
+        self?.addSubview(btn)
         return btn
     }()
     
@@ -66,8 +64,6 @@ class BaseTabBar: UITabBar {
         }
         
     }
-    
-    
 }
 
 
